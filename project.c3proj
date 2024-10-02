@@ -1,0 +1,924 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 40702,
+	"name": "Trash Tamer",
+	"runtime": "c3",
+	"useWorker": "auto",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Facebook",
+			"name": "Facebook",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Particles",
+			"name": "Particles",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "PlatformInfo",
+			"name": "Platform info",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "PlayFabAPI",
+			"name": "PlayFab API",
+			"author": "Zalance Inc",
+			"bundled": false,
+			"version": "0.1.0.0"
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Spritefont2",
+			"name": "Sprite font",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Touch",
+			"name": "Touch",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "advert",
+			"name": "Mobile advert",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "iframe",
+			"name": "iframe",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Bullet",
+			"name": "Bullet",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "DragnDrop",
+			"name": "Drag & Drop",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Fade",
+			"name": "Fade",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Flash",
+			"name": "Flash",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "LOS",
+			"name": "Line of sight",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pin",
+			"name": "Pin",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Platform",
+			"name": "Platform",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Rotate",
+			"name": "Rotate",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Timer",
+			"name": "Timer",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "bound",
+			"name": "Bound to layout",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "destroy",
+			"name": "Destroy outside layout",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "jumpthru",
+			"name": "Jump-thru",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "lunarray_LiteTween",
+			"name": "Lite Tween",
+			"author": "lunarray",
+			"bundled": false,
+			"version": "1.7"
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "water",
+			"name": "Water",
+			"author": "Viktor Korsun",
+			"bundled": false
+		}
+	],
+	"uniqueId": "oa5xkceje25",
+	"objectTypes": {
+		"items": [
+			"Player1",
+			"PlatformSolid",
+			"PlatformJumpThru",
+			"MobileAdvert",
+			"Sasha",
+			"SashaShadow",
+			"PlatformGame",
+			"PlatformInfo",
+			"GameOverTxt3",
+			"FailedToTxt3",
+			"GOverLvl6",
+			"RestartGO6",
+			"MainMenuBtn2",
+			"MenuTxt3",
+			"MainMenuBtn3",
+			"NextBtnGamePlayShadow",
+			"tree",
+			"TextWindow",
+			"TextWindow2",
+			"Facebook",
+			"PlayFabAPI",
+			"selecttxt",
+			"one",
+			"iframe",
+			"Cloud",
+			"DirectionTxt",
+			"DownDirection"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"boxes",
+					"can",
+					"CityBkGd",
+					"closebin",
+					"hole",
+					"LayoutBarrier",
+					"side2blocklvl2",
+					"sideblocklvl2",
+					"StreetTile",
+					"toxicbin",
+					"UndergroundLvl2",
+					"hole2",
+					"TriggerHiddenLv2",
+					"Flag2",
+					"UNDERGROUNFBG",
+					"Ouch",
+					"pipehole",
+					"HiddenLvl2Blocks",
+					"InfoTextLvl2",
+					"InfotxtBackground"
+				],
+				"subfolders": [],
+				"name": "Level2"
+			},
+			{
+				"items": [
+					"LoadingBar",
+					"LoadingCase",
+					"LoadingSBng",
+					"LoadingTxt",
+					"LoadScreen"
+				],
+				"subfolders": [],
+				"name": "LoadingScreen"
+			},
+			{
+				"items": [
+					"Audio",
+					"Mouse",
+					"Touch",
+					"Keyboard"
+				],
+				"subfolders": [],
+				"name": "HardwareTool"
+			},
+			{
+				"items": [
+					"BonusBox",
+					"BonusBoxTrigger",
+					"bush1",
+					"bush2",
+					"cactus",
+					"Coin",
+					"Coin1",
+					"SpCoin2",
+					"Coin3LC1",
+					"CoinTotalLC1",
+					"downshadow",
+					"Enemy",
+					"Enemy2",
+					"EnemyBarrier",
+					"EnemyWeapon",
+					"deathlyRock",
+					"Flag",
+					"FlagPortal",
+					"GenTile",
+					"GrassTile",
+					"Health",
+					"HorizontalSpike",
+					"HUDScore",
+					"HUDScoreText",
+					"Indicator",
+					"InfoTxt",
+					"MovingPlatform",
+					"MainMenuBtn",
+					"Lava",
+					"MenuTxt",
+					"Obj_platformcollision",
+					"ParticlesBlock",
+					"Pipe",
+					"Pipe2",
+					"PipeHidden",
+					"PipeHidden2",
+					"PipeHidden3",
+					"Platform",
+					"RestartBtn",
+					"RockyTile",
+					"RockyTileParticle",
+					"rockyTrigger_break",
+					"ScoreTxt",
+					"ScoreTxt4LC1",
+					"SKY",
+					"TB_Fade",
+					"Thrash",
+					"Thrash2LC1",
+					"Tile1",
+					"Tile2",
+					"tile4",
+					"TrashCollected",
+					"TrashCollected3LC1",
+					"TrashCollectedTxtLC1",
+					"TrashTotalLC1",
+					"Trigger_break",
+					"TriggerHiddenLv1",
+					"Window",
+					"Coin2",
+					"Lava2"
+				],
+				"subfolders": [],
+				"name": "Level1"
+			},
+			{
+				"items": [
+					"BtnExit",
+					"BtnExitShadow",
+					"CreditBgd",
+					"CreditsTxt",
+					"CreditThanksTo",
+					"ExitTxt",
+					"CreditBgd2",
+					"CreditBgd3"
+				],
+				"subfolders": [],
+				"name": "CreditPage"
+			},
+			{
+				"items": [
+					"BtnCredits",
+					"BtnLevels",
+					"BtnOptions",
+					"StartButton",
+					"LevelButton",
+					"CreditButton",
+					"ControlButton",
+					"Menuframe",
+					"SpCoin",
+					"StartScreen",
+					"StartBtnTxt",
+					"FinalMonster2",
+					"SnowyEnemy2",
+					"Sasha2"
+				],
+				"subfolders": [],
+				"name": "Menu"
+			},
+			{
+				"items": [
+					"FailedToTxt2",
+					"GameOverTxt2",
+					"LvlCompleteTxtLC1",
+					"lvlcompletebg",
+					"NextLvlBtn2",
+					"NextLvlBtn1",
+					"RestartLC1",
+					"Window2LC1"
+				],
+				"subfolders": [],
+				"name": "LevelComplete"
+			},
+			{
+				"items": [
+					"GameDesc",
+					"NextLvlBtn3",
+					"Window3"
+				],
+				"subfolders": [],
+				"name": "GamePlay"
+			},
+			{
+				"items": [
+					"down",
+					"Jump",
+					"jumpshadow",
+					"leftshadow",
+					"pickUp2",
+					"pickupshadow",
+					"rightshadow",
+					"speed",
+					"sword",
+					"speedshadow",
+					"swordshadow",
+					"tleft",
+					"tright"
+				],
+				"subfolders": [],
+				"name": "MobileButtons"
+			},
+			{
+				"items": [
+					"bottomSnowBlock",
+					"da",
+					"deadfish",
+					"deadorangefish",
+					"DestroyableBlocklvl3",
+					"dryTree",
+					"leftCornerSnowBlock",
+					"leftSlopeSnowBlock",
+					"LeftSnowBlock",
+					"Level3Background",
+					"ParticleBlockLvl3",
+					"rightCornerSnowBlock",
+					"rightSlopeSnow",
+					"rightSnowBlock",
+					"SnowBlock",
+					"snowBlockLeft",
+					"SnowBlockMid",
+					"SnowBlocks",
+					"SnowyEnemy",
+					"topCornerSnowBlock",
+					"topRightCornerSnowBlock",
+					"triggerBreakLvl3",
+					"coldwater",
+					"Flag3",
+					"infoTextLvl3"
+				],
+				"subfolders": [],
+				"name": "Level3"
+			},
+			{
+				"items": [
+					"SkyBeach",
+					"TiledBackground",
+					"WaterBKGD",
+					"Clouds",
+					"Horizon",
+					"waterPt1",
+					"waterpt2",
+					"waterpt3",
+					"waterpt4",
+					"Boarders",
+					"Splash",
+					"waterpt6",
+					"Icebkgd",
+					"HorizontalSpike2",
+					"waterPt5",
+					"waterPt7",
+					"shark",
+					"Obj_collisionplt",
+					"Trashes2",
+					"Trashes1",
+					"shipBK",
+					"Trashes3",
+					"Trashes4",
+					"Trashes5",
+					"Trashes6",
+					"Trashes7",
+					"Flag4",
+					"bubble",
+					"Lvl4Txt"
+				],
+				"subfolders": [],
+				"name": "Level4"
+			},
+			{
+				"items": [
+					"Background5",
+					"bottom",
+					"bottomleft",
+					"bottomright",
+					"fire",
+					"leftblock",
+					"leftslide",
+					"lefttop",
+					"midtop",
+					"movingsand",
+					"particleblock",
+					"Particles",
+					"rightblock",
+					"rightslide",
+					"righttop",
+					"Sprite5",
+					"Sprite6",
+					"topleft",
+					"topright",
+					"Flag5",
+					"Lvl5Txt"
+				],
+				"subfolders": [],
+				"name": "Level5"
+			},
+			{
+				"items": [
+					"BadBoy2",
+					"BossAttack",
+					"BossBarrier",
+					"Castle2",
+					"FinalMonster3",
+					"FireBall1",
+					"obj_boss_trigger2",
+					"obj_boss_triggerDoor2",
+					"orbs2",
+					"pollutantArea2",
+					"Power1",
+					"ptile3",
+					"ptile4",
+					"Sprite7",
+					"Weapon2",
+					"BadBoy",
+					"Castle",
+					"PowerUpBoxtrigger",
+					"ptile1",
+					"ptile2",
+					"Boots",
+					"FinalMonster",
+					"Gloves",
+					"obj_boss_trigger",
+					"obj_boss_triggerDoor",
+					"pollutantArea",
+					"PowerUpBox",
+					"Sprite3",
+					"Weapon",
+					"PowerUpBoxtrigger2",
+					"PowerUpBox2",
+					"PowerUpBox3",
+					"PowerUpBoxtrigger3",
+					"ToxicLandBGD",
+					"bar",
+					"BHealth",
+					"BhealthF",
+					"BossLife",
+					"Bossprojectile",
+					"detection",
+					"EquipmentBox",
+					"explosion",
+					"fireslash",
+					"Heart",
+					"SwordpickUp",
+					"Lvl6Txt",
+					"MenuTxt2"
+				],
+				"subfolders": [],
+				"name": "Level6"
+			},
+			{
+				"items": [
+					"PlayButton",
+					"RetryButton",
+					"MenuButton",
+					"MuteIcon",
+					"MuteIcon2",
+					"MenuButton2",
+					"MuteIcon3",
+					"PlayButton2",
+					"RetryButton2",
+					"Pausebtn",
+					"Pausebtn2"
+				],
+				"subfolders": [],
+				"name": "Pause"
+			},
+			{
+				"items": [
+					"levelselectbtn",
+					"Levelbkg",
+					"levelBand",
+					"leveltxt"
+				],
+				"subfolders": [],
+				"name": "Levels"
+			},
+			{
+				"items": [
+					"Window2LC2",
+					"down2",
+					"Jump2",
+					"pickUp3",
+					"speed2",
+					"sword2",
+					"Controls"
+				],
+				"subfolders": [],
+				"name": "Controls"
+			}
+		]
+	},
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [
+			"Trashes",
+			"Dangers",
+			"Tiles",
+			"Monsters",
+			"Buttons"
+		],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"LoadingScreen",
+			"Menu",
+			"CreditPage",
+			"Gameplay",
+			"HiddenLevel1",
+			"HiddenLevel2",
+			"LevelComplete1",
+			"LevelComplete2",
+			"LevelComplete3",
+			"LevelComplete4",
+			"LevelComplete5",
+			"LevelComplete6",
+			"LevelSelect",
+			"Layout 1",
+			"Controls"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"1",
+					"2",
+					"3",
+					"4",
+					"5",
+					"6"
+				],
+				"subfolders": [],
+				"name": "Level"
+			}
+		]
+	},
+	"eventSheets": {
+		"items": [
+			"LoadScreenSheet",
+			"GameplayDescSheet",
+			"MenuSheet",
+			"CreditPage",
+			"Level2",
+			"LvlCompSheet1",
+			"Level1",
+			"EventHidLv2",
+			"LvlCompSheet2",
+			"EventHidLv1",
+			"Level3",
+			"LvlCompSheet3",
+			"Level4",
+			"LvlCompSheet4",
+			"Level5",
+			"LvlCompSheet5",
+			"Level6",
+			"LvlCompSheet6",
+			"LevelSelect",
+			"Event sheet 1",
+			"ControlsSheet"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [
+				{
+					"name": "click4.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 641240013934580,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "game-bonus-144751.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 392609361424410,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "game over - sound effect.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 409063475098478,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Retro Game Coin Sound Effect.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 196373238112438,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "game-level-complete-143022.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 416779940713466,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"music": {
+			"items": [
+				{
+					"name": "Kirby's Return to Dream Land Title Theme 8 Bit Remix.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 753319343768924,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 221402031766693,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 650815590527289,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 351494298557138,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 793330493861243,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 551465652302712,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 508792363723328,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 793862656409231,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [],
+			"subfolders": []
+		}
+	},
+	"timelines": {
+		"items": [
+			"Timeline 1"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"flowcharts": {
+		"items": [],
+		"subfolders": []
+	},
+	"properties": {
+		"description": "This game is about cleaning environment",
+		"version": "1.0.0.6",
+		"author": "yoven.ketan",
+		"authorEmail": "ychinnasamy48@gmail.com",
+		"authorWebsite": "",
+		"appId": "com.trashgame.name",
+		"pixelRounding": false,
+		"zAxisScale": "normalized",
+		"fov": 0.7853981633974483,
+		"useLoaderLayout": true,
+		"fullscreenMode": "letterbox-scale",
+		"fullscreenQuality": "high",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "landscape",
+		"webgpu": "auto",
+		"gpuPreference": "high-performance",
+		"scriptsType": "module",
+		"framerateMode": "vsync",
+		"sampling": "trilinear",
+		"downscaling": "medium",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "auto",
+		"zNear": 1,
+		"zFar": 10000,
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "progress",
+		"preloadSounds": true,
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "https",
+		"autoReloadScriptsOnPreview": false,
+		"exportFileStructure": "folders",
+		"uidAllocationMode": "increment"
+	},
+	"viewportWidth": 1940,
+	"viewportHeight": 906,
+	"firstLayout": "LoadingScreen"
+}

@@ -1,0 +1,111 @@
+{
+	"name": "tright",
+	"plugin-id": "Sprite",
+	"sid": 228179923620891,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 242893336166599
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 80,
+						"height": 80,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8175039,
+						"collisionPoly": {
+							"points": [
+								0.425,
+								0,
+								0.575,
+								0,
+								0.6375,
+								0.0125,
+								0.7375,
+								0.05,
+								0.8125,
+								0.1,
+								0.9,
+								0.1875,
+								0.95,
+								0.2625,
+								1,
+								0.4125,
+								1,
+								0.575,
+								0.9875,
+								0.6375,
+								0.95,
+								0.7375,
+								0.9,
+								0.8125,
+								0.8125,
+								0.9,
+								0.7375,
+								0.95,
+								0.65,
+								0.9875,
+								0.6,
+								1,
+								0.4,
+								1,
+								0.35,
+								0.9875,
+								0.2375,
+								0.9375,
+								0.2,
+								0.9125,
+								0.1,
+								0.8125,
+								0.0375,
+								0.7125,
+								0.0125,
+								0.6375,
+								0,
+								0.575,
+								0,
+								0.4125,
+								0.05,
+								0.2625,
+								0.1,
+								0.1875,
+								0.2,
+								0.0875,
+								0.2375,
+								0.0625,
+								0.2875,
+								0.0375,
+								0.3625,
+								0.0125
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 747606137020351,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

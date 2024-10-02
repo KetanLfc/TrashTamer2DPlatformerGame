@@ -1,0 +1,15 @@
+{
+	"name": "DirectionTxt",
+	"plugin-id": "Text",
+	"sid": 736968606294913,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 762253114030385
+		}
+	],
+	"effectTypes": []
+}

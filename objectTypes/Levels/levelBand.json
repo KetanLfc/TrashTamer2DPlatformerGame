@@ -1,0 +1,61 @@
+{
+	"name": "levelBand",
+	"plugin-id": "Sprite",
+	"sid": 926281924959603,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 458,
+						"height": 121,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1660602,
+						"collisionPoly": {
+							"points": [
+								0.4017467248908297,
+								0,
+								0.5982532751091703,
+								0,
+								0.7947598253275109,
+								0.08264462809917356,
+								0.9759825327510917,
+								0.3305785123966942,
+								1,
+								0.9421487603305785,
+								0.002183406113537118,
+								0.9421487603305785,
+								0.028384279475982533,
+								0.32231404958677684,
+								0.2794759825327511,
+								0.03305785123966942,
+								0.32532751091703055,
+								0.01652892561983471
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 683789036102797,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

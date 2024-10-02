@@ -1,0 +1,151 @@
+{
+	"name": "BossAttack",
+	"plugin-id": "Sprite",
+	"sid": 402954039223073,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 328925892850138
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 433,
+						"height": 303,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 904433,
+						"collisionPoly": {
+							"points": [
+								0.11547344110854507,
+								0.5082508250825082,
+								0.1939953810623557,
+								0.12211221122112215,
+								0.20785219399538102,
+								0.29372937293729373,
+								0.18937644341801385,
+								0.7722772277227723,
+								0.15704387990762125,
+								0.8085808580858086,
+								0.1293302540415704,
+								0.7194719471947195
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 433,
+						"height": 327,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8074347,
+						"collisionPoly": {
+							"points": [
+								0.11547344110854503,
+								0.5082508250825082,
+								0.19399538106235567,
+								0.12211221122112215,
+								0.20785219399538107,
+								0.29372937293729373,
+								0.18937644341801385,
+								0.7722772277227723,
+								0.15704387990762125,
+								0.8085808580858086,
+								0.12933025404157045,
+								0.7194719471947195
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 332,
+						"height": 752,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9056625,
+						"collisionPoly": {
+							"points": [
+								0.8845265588914549,
+								0.4917491749174918,
+								0.8060046189376443,
+								0.8778877887788779,
+								0.792147806004619,
+								0.7062706270627063,
+								0.8106235565819861,
+								0.2277227722772277,
+								0.8429561200923787,
+								0.1914191419141914,
+								0.8706697459584296,
+								0.2805280528052805
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 600,
+						"height": 1000,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5012466,
+						"collisionPoly": {
+							"points": [
+								0.11547344110854503,
+								0.5082508250825082,
+								0.19399538106235567,
+								0.12211221122112215,
+								0.20785219399538107,
+								0.29372937293729373,
+								0.18937644341801385,
+								0.7722772277227723,
+								0.15704387990762125,
+								0.8085808580858086,
+								0.12933025404157045,
+								0.7194719471947195
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 10,
+						"tag": ""
+					}
+				],
+				"sid": 719805345616026,
+				"name": "Orbs",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

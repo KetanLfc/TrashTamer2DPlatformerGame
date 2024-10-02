@@ -1,0 +1,15 @@
+{
+	"name": "ScoreTxt4LC1",
+	"plugin-id": "Text",
+	"sid": 500008219764192,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 521560494493722
+		}
+	],
+	"effectTypes": []
+}

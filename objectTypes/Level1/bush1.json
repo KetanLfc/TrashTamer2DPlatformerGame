@@ -1,0 +1,22 @@
+{
+	"name": "bush1",
+	"plugin-id": "TiledBg",
+	"sid": 495521071793990,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 85,
+		"height": 31,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 8874850,
+		"useCollisionPoly": true,
+		"tag": ""
+	}
+}

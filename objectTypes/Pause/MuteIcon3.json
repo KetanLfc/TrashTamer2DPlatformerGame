@@ -1,0 +1,108 @@
+{
+	"name": "MuteIcon3",
+	"plugin-id": "Sprite",
+	"sid": 787246505576639,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "isMuted",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 606319058910698
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 360,
+						"height": 290,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8157679,
+						"collisionPoly": {
+							"points": [
+								0.39344262295081966,
+								0,
+								0.9453551912568307,
+								0.14736842105263157,
+								0.8360655737704918,
+								0.9368421052631579,
+								0.3551912568306011,
+								0.9526315789473684,
+								0.08196721311475409,
+								0.9157894736842105,
+								0.02185792349726776,
+								0.8157894736842105,
+								0.11475409836065574,
+								0.03684210526315789
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 562118541716308,
+				"name": "UnMute",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			},
+			{
+				"frames": [
+					{
+						"width": 360,
+						"height": 290,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7036470,
+						"collisionPoly": {
+							"points": [
+								0.39344262295081966,
+								0,
+								0.9453551912568307,
+								0.14736842105263157,
+								0.8360655737704918,
+								0.9368421052631579,
+								0.3551912568306011,
+								0.9526315789473684,
+								0.08196721311475409,
+								0.9157894736842105,
+								0.02185792349726776,
+								0.8157894736842105,
+								0.11475409836065574,
+								0.03684210526315789
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 339603437186072,
+				"name": "Mute",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

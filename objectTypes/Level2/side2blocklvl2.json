@@ -1,0 +1,51 @@
+{
+	"name": "side2blocklvl2",
+	"plugin-id": "Sprite",
+	"sid": 187972630119496,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 70,
+						"height": 70,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4523598,
+						"collisionPoly": {
+							"points": [
+								1,
+								0.014285714285714285,
+								1,
+								1,
+								0.014285714285714285,
+								0.9857142857142858,
+								0.4714285714285714,
+								0.4
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 331719004868239,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

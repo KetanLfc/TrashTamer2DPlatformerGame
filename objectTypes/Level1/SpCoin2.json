@@ -1,0 +1,63 @@
+{
+	"name": "SpCoin2",
+	"plugin-id": "Sprite",
+	"sid": 834239109715015,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 488,
+						"height": 512,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4671686,
+						"collisionPoly": {
+							"points": [
+								0.1495901639344263,
+								0.181640625,
+								0.4651639344262298,
+								0.015625,
+								0.760245901639344,
+								0.05078125,
+								0.9733606557377048,
+								0.296875,
+								0.9733606557377049,
+								0.59375,
+								0.7561475409836071,
+								0.904296875,
+								0.40983606557377034,
+								0.98046875,
+								0.18032786885245883,
+								0.876953125,
+								0.028688524590163942,
+								0.70703125,
+								0.02459016393442623,
+								0.404296875
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 616857866587069,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,57 @@
+{
+	"name": "DownDirection",
+	"plugin-id": "Sprite",
+	"sid": 133439701639859,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 865480992926399
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 98,
+						"height": 98,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1861037,
+						"collisionPoly": {
+							"points": [
+								0.11224489795918367,
+								0.01020408163265306,
+								0.9897959183673469,
+								0.10204081632653061,
+								0.8979591836734694,
+								0.9897959183673469,
+								0.01020408163265306,
+								0.8877551020408163
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 179019058969991,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,132 @@
+{
+	"name": "CreditPage",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 393149785647963,
+					"parameters": {
+						"object": "BtnExitShadow"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 509866102776282,
+					"parameters": {
+						"seconds": "0.2"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 111844106944854,
+					"parameters": {
+						"layout": "Menu"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 168254742060127,
+					"parameters": {
+						"audio-file": "click4",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 219254603859348
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 116779581215679
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "GameDesc",
+					"sid": 100241022577450,
+					"disabled": true,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Window3",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "set-axes",
+					"objectClass": "CreditThanksTo",
+					"sid": 563823411777530,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"axes": "vertical-only"
+					}
+				}
+			],
+			"sid": 403485363246724
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-outside-layout",
+					"objectClass": "CreditThanksTo",
+					"sid": 833223386157596
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "CreditThanksTo",
+					"sid": 545270373368644,
+					"parameters": {
+						"y": "clamp(CreditThanksTo.Y, CreditBgd.Y - (CreditThanksTo.Height - CreditBgd.Height), CreditBgd.Y)"
+					}
+				}
+			],
+			"sid": 251694906719629
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-dragging",
+					"objectClass": "CreditThanksTo",
+					"sid": 875616047924507,
+					"behaviorType": "DragDrop"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-axes",
+					"objectClass": "CreditThanksTo",
+					"sid": 380791776136372,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"axes": "vertical-only"
+					}
+				}
+			],
+			"sid": 800495782698346
+		}
+	],
+	"sid": 216245161858294
+}

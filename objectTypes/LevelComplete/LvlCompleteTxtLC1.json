@@ -1,0 +1,15 @@
+{
+	"name": "LvlCompleteTxtLC1",
+	"plugin-id": "Text",
+	"sid": 129649063725499,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 204314156818588
+		}
+	],
+	"effectTypes": []
+}

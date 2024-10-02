@@ -1,0 +1,85 @@
+{
+	"name": "Bossprojectile",
+	"plugin-id": "Sprite",
+	"sid": 330842203025828,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 825910043849247
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 913,
+						"height": 809,
+						"originX": 0.4994523548740416,
+						"originY": 0.5012360939431397,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6145722,
+						"collisionPoly": {
+							"points": [
+								0.7047730908787474,
+								0.20409116580792352,
+								0.7710963170865279,
+								0.4642974866089823,
+								0.5683154457014068,
+								0.7771596409149804,
+								0.19666449890470974,
+								0.4704539211646751,
+								0.32989115553121584,
+								0.20880545254772706
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 399,
+						"height": 354,
+						"originX": 0.49874686716791977,
+						"originY": 0.501412429378531,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1451942,
+						"collisionPoly": {
+							"points": [
+								0.11027591928694006,
+								0.070621738619973,
+								0.8571430547440081,
+								0,
+								0.977443442102388,
+								0.7288137162595074,
+								0.36090206281827003,
+								0.8531075042642365
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 990371372515223,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

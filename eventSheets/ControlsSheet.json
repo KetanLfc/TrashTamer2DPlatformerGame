@@ -1,0 +1,153 @@
+{
+	"name": "ControlsSheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 853180812672300
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "Controls",
+					"sid": 820008448859721,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Window2LC2",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "down2",
+					"sid": 225875946821838,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Window2LC2",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "Jump2",
+					"sid": 504636183559433,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Window2LC2",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "pickUp3",
+					"sid": 502559079146828,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Window2LC2",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "speed2",
+					"sid": 824254962337404,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Window2LC2",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "sword2",
+					"sid": 573683299473328,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Window2LC2",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				}
+			],
+			"sid": 947024638611385
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 265456600264836,
+					"parameters": {
+						"object": "BtnExitShadow"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 726692283623039,
+					"parameters": {
+						"seconds": "0.2"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 289787012142308,
+					"parameters": {
+						"layout": "Menu"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 747054609482898,
+					"parameters": {
+						"audio-file": "click4",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 198828429503671
+		}
+	],
+	"sid": 806635456626351
+}

@@ -1,0 +1,42 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 748142222570536
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 472111498953303,
+					"parameters": {
+						"variable": "Score",
+						"comparison": 0,
+						"value": "4"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "log-in",
+					"objectClass": "Facebook",
+					"sid": 969974092945709,
+					"parameters": {
+						"permissions": "\"\""
+					}
+				},
+				{
+					"id": "prompt-wall-post",
+					"objectClass": "Facebook",
+					"sid": 768407664029789
+				}
+			],
+			"sid": 876180850595609
+		}
+	],
+	"sid": 503592317183328
+}

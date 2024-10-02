@@ -1,0 +1,81 @@
+{
+	"name": "Sasha2",
+	"plugin-id": "Sprite",
+	"sid": 128905062002587,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "direction",
+			"type": "string",
+			"desc": "direction of Run Left | Right ",
+			"show": true,
+			"sid": 712466311734091
+		},
+		{
+			"name": "Health",
+			"type": "number",
+			"desc": "As Hero gets hurt losses a life",
+			"show": true,
+			"sid": 996061670491994
+		},
+		{
+			"name": "isInvincible",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 832267901281375
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 881,
+						"height": 753,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6185538,
+						"collisionPoly": {
+							"points": [
+								0.7060158910329172,
+								0.0013280212483399733,
+								0.7968217934165721,
+								0.06108897742363878,
+								0.8796821793416572,
+								0.18857901726427623,
+								0.9682179341657208,
+								0.8167330677290837,
+								0.5788876276958003,
+								0.950863213811421,
+								0.4052213393870602,
+								0.9880478087649402,
+								0.3246311010215664,
+								0.9402390438247012,
+								0.27809307604994327,
+								0.6772908366533864
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 876619756352200,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 3
+			}
+		],
+		"subfolders": []
+	}
+}

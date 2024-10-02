@@ -1,0 +1,52 @@
+{
+	"name": "LoadScreenSheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 432412742827042
+				}
+			],
+			"actions": [
+				{
+					"id": "set-width",
+					"objectClass": "LoadingBar",
+					"sid": 469607008103174,
+					"parameters": {
+						"width": "LoadingBar.Width+2"
+					}
+				}
+			],
+			"sid": 518988191418082
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-width",
+					"objectClass": "LoadingBar",
+					"sid": 161413258730944,
+					"parameters": {
+						"comparison": 0,
+						"width": "512"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 745910123227949,
+					"parameters": {
+						"layout": "Menu"
+					}
+				}
+			],
+			"sid": 863073225866297
+		}
+	],
+	"sid": 598207652045654
+}

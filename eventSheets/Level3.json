@@ -1,0 +1,809 @@
+{
+	"name": "Level3",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Level2"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "MenuSheet"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "SashaShadow",
+					"sid": 148643178259905,
+					"parameters": {
+						"object": "triggerBreakLvl3"
+					}
+				},
+				{
+					"id": "pick-nearestfurthest",
+					"objectClass": "DestroyableBlocklvl3",
+					"sid": 425180149029751,
+					"parameters": {
+						"which": "nearest",
+						"x": "SashaShadow.X",
+						"y": "SashaShadow.Y"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Sasha",
+					"sid": 858233199036589,
+					"parameters": {
+						"animation": "\"Collision\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "DestroyableBlocklvl3",
+					"sid": 947847498933063,
+					"parameters": {
+						"object": "ParticleBlockLvl3",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "ParticleBlockLvl3",
+					"sid": 474500167248872,
+					"parameters": {
+						"angle": "270"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "triggerBreakLvl3",
+					"sid": 497118959709789
+				},
+				{
+					"id": "destroy",
+					"objectClass": "DestroyableBlocklvl3",
+					"sid": 537703851673384
+				}
+			],
+			"sid": 539539652718003
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SnowyEnemy",
+					"sid": 505485376277083,
+					"parameters": {
+						"instance-variable": "Direction",
+						"comparison": 0,
+						"value": "\"Right\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "SnowyEnemy",
+					"sid": 299997798732651,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "right"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "SnowyEnemy",
+					"sid": 268603615449427,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 807217553563220
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "SnowyEnemy",
+					"sid": 383450518433470,
+					"parameters": {
+						"instance-variable": "Direction",
+						"comparison": 0,
+						"value": "\"Left\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "simulate-control",
+					"objectClass": "SnowyEnemy",
+					"sid": 627100640258073,
+					"behaviorType": "Platform",
+					"parameters": {
+						"control": "left"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "SnowyEnemy",
+					"sid": 654646081461874,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 996565928096947
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "SnowyEnemy",
+					"sid": 870903608345383,
+					"parameters": {
+						"object": "EnemyBarrier"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "SnowyEnemy",
+					"sid": 594000782724396,
+					"parameters": {
+						"object": "EnemyWeapon",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "EnemyWeapon",
+					"sid": 473299017678734,
+					"parameters": {
+						"x": "SashaShadow.X",
+						"y": "SashaShadow.Y"
+					}
+				}
+			],
+			"sid": 139756770765367,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "SnowyEnemy",
+							"sid": 206245611271151,
+							"parameters": {
+								"instance-variable": "Direction",
+								"comparison": 0,
+								"value": "\"Right\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "SnowyEnemy",
+							"sid": 493269180141533,
+							"parameters": {
+								"animation": "\"Walk\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "SnowyEnemy",
+							"sid": 115389775853591,
+							"parameters": {
+								"instance-variable": "Direction",
+								"value": "\"Left\""
+							}
+						}
+					],
+					"sid": 830441400250561
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 998837945621287
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "SnowyEnemy",
+							"sid": 331995490523695,
+							"parameters": {
+								"animation": "\"Walk\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "SnowyEnemy",
+							"sid": 889444842461830,
+							"parameters": {
+								"instance-variable": "Direction",
+								"value": "\"Right\""
+							}
+						}
+					],
+					"sid": 420953050264845
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "key-is-down",
+					"objectClass": "Keyboard",
+					"sid": 373767386084005,
+					"parameters": {
+						"key": 83
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Sasha",
+					"sid": 675789518766592,
+					"parameters": {
+						"animation": "\"Sword\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 700314389007828,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Sasha",
+							"sid": 865254913133500,
+							"parameters": {
+								"object": "SnowyEnemy"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "SnowyEnemy",
+							"sid": 675090661725898,
+							"behaviorType": "Platform",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-collisions-enabled",
+							"objectClass": "SnowyEnemy",
+							"sid": 132644154064157,
+							"parameters": {
+								"collisions": "disabled"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "SnowyEnemy",
+							"sid": 330292378137239,
+							"parameters": {
+								"animation": "\"Die\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "SnowyEnemy",
+							"sid": 421471709472238,
+							"behaviorType": "Fade"
+						},
+						{
+							"id": "destroy",
+							"objectClass": "EnemyWeapon",
+							"sid": 572310091779545
+						}
+					],
+					"sid": 304276385258422,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "SashaShadow",
+					"sid": 503193005976052,
+					"parameters": {
+						"object": "SnowyEnemy"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 881012724965420,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-falling",
+							"objectClass": "SashaShadow",
+							"sid": 640560840921389,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-collisions-enabled",
+							"objectClass": "SnowyEnemy",
+							"sid": 577797662187919,
+							"parameters": {
+								"collisions": "disabled"
+							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "SnowyEnemy",
+							"sid": 403216188106717,
+							"behaviorType": "Platform",
+							"parameters": {
+								"state": "disabled"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "SnowyEnemy",
+							"sid": 803869740564796,
+							"parameters": {
+								"animation": "\"Die\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "SnowyEnemy",
+							"sid": 293203555511450,
+							"behaviorType": "Fade"
+						},
+						{
+							"id": "set-vector-y",
+							"objectClass": "SashaShadow",
+							"sid": 337195179204997,
+							"behaviorType": "Platform",
+							"parameters": {
+								"vector-y": "-650"
+							}
+						}
+					],
+					"sid": 840709343568502
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "SnowyEnemy",
+					"sid": 591744520990499,
+					"parameters": {
+						"object": "SashaShadow"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "Hero_Health_Func",
+					"sid": 754359404371976
+				},
+				{
+					"id": "flash",
+					"objectClass": "Sasha",
+					"sid": 317965281295665,
+					"behaviorType": "Flash",
+					"parameters": {
+						"on-time": "0.1",
+						"off-time": "0.1",
+						"duration": "3.0"
+					}
+				}
+			],
+			"sid": 195720115941073
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 848384177483664
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "infoTextLvl3",
+					"sid": 737571950405108,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "TextWindow",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "InfoTextLvl2",
+					"sid": 114954226443236,
+					"behaviorType": "Fade"
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "TextWindow",
+					"sid": 447729135978978,
+					"behaviorType": "Fade"
+				}
+			],
+			"sid": 848534600302069
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Sasha",
+					"sid": 977447018199138,
+					"parameters": {
+						"object": "coldwater"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 906856764741803,
+					"parameters": {
+						"audio-file": "game over - sound effect",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 425295628654118,
+					"parameters": {
+						"seconds": "0.2"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Sasha",
+					"sid": 180415078918093,
+					"parameters": {
+						"instance-variable": "Health",
+						"value": "5"
+					}
+				}
+			],
+			"sid": 453419272113467
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "has-los-to-object",
+					"objectClass": "SnowyEnemy",
+					"sid": 568097867163756,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"object": "SashaShadow",
+						"image-point": "0"
+					}
+				},
+				{
+					"id": "is-animation-playing",
+					"objectClass": "SnowyEnemy",
+					"sid": 371643385496865,
+					"parameters": {
+						"animation": "\"Die\""
+					},
+					"isInverted": true
+				},
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 443731042801432,
+					"parameters": {
+						"interval-seconds": "1.0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "EnemyWeapon",
+					"sid": 867818762278052,
+					"parameters": {
+						"x": "SashaShadow.X",
+						"y": "SashaShadow.Y"
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "EnemyWeapon",
+					"sid": 149795131439329,
+					"parameters": {
+						"angle": "clamp(EnemyWeapon.Angle,90,270)"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "Enemy",
+					"sid": 578685997760672,
+					"parameters": {
+						"object": "EnemyWeapon",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-angle-toward-position",
+					"objectClass": "EnemyWeapon",
+					"sid": 404425103175950,
+					"parameters": {
+						"x": "SashaShadow.X",
+						"y": "SashaShadow.Y"
+					}
+				}
+			],
+			"sid": 135225162083571
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-android",
+					"objectClass": "PlatformInfo",
+					"sid": 149212763357102
+				}
+			],
+			"actions": [],
+			"sid": 779429636542920,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 204766024718939,
+							"parameters": {
+								"object": "swordshadow"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Sasha",
+							"sid": 303093617334621,
+							"parameters": {
+								"animation": "\"Sword\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 769693012800666,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "SashaShadow",
+									"sid": 685325388981697,
+									"parameters": {
+										"object": "SnowyEnemy"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-enabled",
+									"objectClass": "SnowyEnemy",
+									"sid": 792659139739830,
+									"behaviorType": "Platform",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "set-collisions-enabled",
+									"objectClass": "SnowyEnemy",
+									"sid": 821032565156548,
+									"parameters": {
+										"collisions": "disabled"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "SnowyEnemy",
+									"sid": 651545998109928,
+									"parameters": {
+										"animation": "\"Die\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "start-fade",
+									"objectClass": "SnowyEnemy",
+									"sid": 972451468978709,
+									"behaviorType": "Fade"
+								},
+								{
+									"id": "destroy",
+									"objectClass": "EnemyWeapon",
+									"sid": 821489235158978
+								}
+							],
+							"sid": 328317732973861
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-ios",
+					"objectClass": "PlatformInfo",
+					"sid": 179765788528945
+				}
+			],
+			"actions": [],
+			"sid": 682970159077543,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 565499946752122,
+							"parameters": {
+								"object": "swordshadow"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Sasha",
+							"sid": 261900230674523,
+							"parameters": {
+								"animation": "\"Sword\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 167284683778979,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "SashaShadow",
+									"sid": 662748802097492,
+									"parameters": {
+										"object": "SnowyEnemy"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-collisions-enabled",
+									"objectClass": "SnowyEnemy",
+									"sid": 100141100739361,
+									"parameters": {
+										"collisions": "disabled"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "SnowyEnemy",
+									"sid": 819386372250045,
+									"behaviorType": "Platform",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "start-fade",
+									"objectClass": "SnowyEnemy",
+									"sid": 444281232842969,
+									"behaviorType": "Fade"
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "SnowyEnemy",
+									"sid": 300218091608618,
+									"parameters": {
+										"animation": "\"Die\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "EnemyWeapon",
+									"sid": 696450991228029
+								}
+							],
+							"sid": 802229069597197
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "SashaShadow",
+					"sid": 399862878977173,
+					"parameters": {
+						"object": "Flag3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 912214847065630,
+					"parameters": {
+						"layout": "LevelComplete3"
+					}
+				}
+			],
+			"sid": 121609071835367
+		}
+	],
+	"sid": 992205838670192
+}

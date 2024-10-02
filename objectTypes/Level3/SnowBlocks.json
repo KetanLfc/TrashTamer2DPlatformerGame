@@ -1,0 +1,61 @@
+{
+	"name": "SnowBlocks",
+	"plugin-id": "Sprite",
+	"sid": 231263886566531,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 920341721734631
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 48,
+						"height": 48,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3737849,
+						"collisionPoly": {
+							"points": [
+								0.07142857142857142,
+								0,
+								1,
+								0,
+								1,
+								1,
+								0.04285714285714286,
+								0.9857142857142858,
+								0,
+								0.9285714285714286,
+								0.014285714285714285,
+								0.04285714285714286
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 498223408200544,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

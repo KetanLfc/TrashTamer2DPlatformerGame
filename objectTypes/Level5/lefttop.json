@@ -1,0 +1,61 @@
+{
+	"name": "lefttop",
+	"plugin-id": "Sprite",
+	"sid": 759407912846311,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 825139398339511
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 48,
+						"height": 48,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4917362,
+						"collisionPoly": {
+							"points": [
+								0.07142857142857142,
+								0,
+								1,
+								0,
+								1,
+								1,
+								0.04285714285714286,
+								0.9857142857142858,
+								0,
+								0.9285714285714286,
+								0.014285714285714285,
+								0.04285714285714286
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 887139180420984,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

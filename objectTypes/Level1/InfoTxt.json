@@ -1,0 +1,15 @@
+{
+	"name": "InfoTxt",
+	"plugin-id": "Text",
+	"sid": 439675491506233,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 340102223199143
+		}
+	],
+	"effectTypes": []
+}

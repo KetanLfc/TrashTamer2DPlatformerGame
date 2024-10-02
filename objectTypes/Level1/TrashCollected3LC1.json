@@ -1,0 +1,23 @@
+{
+	"name": "TrashCollected3LC1",
+	"plugin-id": "Text",
+	"sid": 872974754084597,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "numberOfTrashes",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 791595920503612
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 728345181568017
+		}
+	],
+	"effectTypes": []
+}

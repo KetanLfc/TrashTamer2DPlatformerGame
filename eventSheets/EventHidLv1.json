@@ -1,0 +1,150 @@
+{
+	"name": "EventHidLv1",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Level2"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "SashaShadow",
+					"sid": 211435776049755,
+					"parameters": {
+						"object": "PipeHidden2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 664712663803400,
+					"parameters": {
+						"layout": "2"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 100457679441721,
+					"parameters": {
+						"variable": "HiddenLevel1",
+						"value": "1"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 711463854396316,
+					"parameters": {
+						"audio-file": "game-bonus-144751",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 905126035267907
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "SashaShadow",
+					"sid": 981038828558303,
+					"parameters": {
+						"object": "Coin"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 111941491930017,
+					"parameters": {
+						"variable": "Score",
+						"value": "Score"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "ScoreTxt",
+					"sid": 408583371158116,
+					"parameters": {
+						"text": "\"Score \" & Score"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Coin",
+					"sid": 557005974847390
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 884517687674651,
+					"parameters": {
+						"audio-file": "Retro Game Coin Sound Effect",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 609884973809001
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 917525725420212,
+					"parameters": {
+						"object": "RestartBtn"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 379683728249618,
+					"parameters": {
+						"layout": "2"
+					}
+				}
+			],
+			"sid": 581577080606837
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 391133383946100
+				}
+			],
+			"actions": [
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 812688098922000,
+					"parameters": {
+						"time-scale": "1.0"
+					}
+				}
+			],
+			"sid": 532313182529142
+		}
+	],
+	"sid": 993838507668442
+}

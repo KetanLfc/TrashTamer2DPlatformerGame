@@ -1,0 +1,100 @@
+{
+	"name": "shark",
+	"plugin-id": "Sprite",
+	"sid": 392846421754648,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 237814716217556
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 257162101564359
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 377,
+						"height": 163,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6821819,
+						"collisionPoly": {
+							"points": [
+								0.7058823529411764,
+								0.20424403183023876,
+								0.7005347593582888,
+								0.32625994694960214,
+								0.6898395721925134,
+								0.38196286472148544,
+								0.4852941482462348,
+								0.4907161955491934,
+								0.18983957219251335,
+								0.4244031830238727,
+								0.12834224598930477,
+								0.273209549071618,
+								0.39839566072678173,
+								0.25198945063178674
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 377,
+						"height": 163,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8175209,
+						"collisionPoly": {
+							"points": [
+								0.3687002652519894,
+								0.030674846625766916,
+								0.7798407779764435,
+								0.34355800137198034,
+								0.623342175066313,
+								0.8834355828220859,
+								0.2679045092838197,
+								0.9325153374233128,
+								0.12997347480106103,
+								0.9141104294478528,
+								0.04509283819628651,
+								0.5521472392638037,
+								0.039787798408488007,
+								0.45398773006134974
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 725389323281364,
+				"name": "Moving",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 2
+			}
+		],
+		"subfolders": []
+	}
+}

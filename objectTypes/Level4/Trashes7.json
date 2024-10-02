@@ -1,0 +1,73 @@
+{
+	"name": "Trashes7",
+	"plugin-id": "Sprite",
+	"sid": 362735455666086,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Tween",
+			"name": "Tween",
+			"sid": 232006379309122
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 98,
+						"height": 96,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3162909,
+						"collisionPoly": {
+							"points": [
+								0.523704629415994,
+								0.45354437651129953,
+								0.6587127793340518,
+								0.38311688725271553,
+								0.8678701974658177,
+								0.44124152392757177,
+								0.9230769230769231,
+								0.7727272727272727,
+								0.5659339569427156,
+								0.7992424401369963,
+								0.4778649298699348,
+								0.8674241152676669,
+								0.38461538461538464,
+								0.9090909090909091,
+								0.11596003621738656,
+								0.9836811514201542,
+								0.0020408786073022977,
+								0.8558826891079904,
+								0.1225014255908944,
+								0.7855905912802704,
+								0.23479855875267794,
+								0.6372024124982405,
+								0.3825743658763461,
+								0.49536182048811755
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 914662872658353,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

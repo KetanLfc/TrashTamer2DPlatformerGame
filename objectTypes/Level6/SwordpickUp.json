@@ -1,0 +1,70 @@
+{
+	"name": "SwordpickUp",
+	"plugin-id": "Sprite",
+	"sid": 938069966707352,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 779525690929730
+		},
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 931318394246583
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 509,
+						"height": 73,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4967407,
+						"collisionPoly": {
+							"points": [
+								0.029469548133595286,
+								0,
+								0.9980353634577603,
+								0.1917808219178082,
+								0.9646365422396856,
+								0.5205479452054794,
+								0.9430255402750491,
+								0.589041095890411,
+								0.9037328094302554,
+								0.6438356164383562,
+								0.21218074656188604,
+								1,
+								0.007858546168958742,
+								0.4520547945205479,
+								0.0019646365422396855,
+								0.410958904109589
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 710845168894305,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

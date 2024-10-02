@@ -1,0 +1,96 @@
+{
+	"name": "Castle",
+	"plugin-id": "Sprite",
+	"sid": 363293257634451,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 80,
+						"height": 80,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8920400,
+						"collisionPoly": {
+							"points": [
+								0.2,
+								0,
+								0.8,
+								0,
+								1,
+								0.4,
+								1,
+								1,
+								0,
+								1,
+								0,
+								0.4
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 910801061132278,
+				"name": "BarDown",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 80,
+						"height": 80,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 285076,
+						"collisionPoly": {
+							"points": [
+								0.2,
+								0,
+								0.8,
+								0,
+								1,
+								0.4,
+								1,
+								1,
+								0,
+								1,
+								0,
+								0.4
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 336308222443932,
+				"name": "BarUp",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

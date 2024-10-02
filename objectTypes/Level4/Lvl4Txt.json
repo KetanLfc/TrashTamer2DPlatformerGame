@@ -1,0 +1,20 @@
+{
+	"name": "Lvl4Txt",
+	"plugin-id": "Text",
+	"sid": 475915754238269,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 213726800219601
+		},
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 723686484519807
+		}
+	],
+	"effectTypes": []
+}

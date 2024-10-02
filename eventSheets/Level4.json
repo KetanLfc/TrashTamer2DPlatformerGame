@@ -1,0 +1,1277 @@
+{
+	"name": "Level4",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Level2"
+		},
+		{
+			"eventType": "variable",
+			"name": "Trashes2",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 205208291954999
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Land",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Sasha",
+							"sid": 599147334037259,
+							"parameters": {
+								"instance-variable": "state",
+								"comparison": 0,
+								"value": "\"Land\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-max-speed",
+							"objectClass": "SashaShadow",
+							"sid": 714310657499426,
+							"behaviorType": "Platform",
+							"parameters": {
+								"max-speed": "330"
+							}
+						},
+						{
+							"id": "set-acceleration",
+							"objectClass": "SashaShadow",
+							"sid": 223972050898980,
+							"behaviorType": "Platform",
+							"parameters": {
+								"acceleration": "1000"
+							}
+						},
+						{
+							"id": "set-deceleration",
+							"objectClass": "SashaShadow",
+							"sid": 103305721442208,
+							"behaviorType": "Platform",
+							"parameters": {
+								"deceleration": "400"
+							}
+						},
+						{
+							"id": "set-max-fall-speed",
+							"objectClass": "SashaShadow",
+							"sid": 309593493179526,
+							"behaviorType": "Platform",
+							"parameters": {
+								"max-fall-speed": "1000"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Sasha",
+							"sid": 854349802871166,
+							"parameters": {
+								"instance-variable": "jump",
+								"value": "-600"
+							}
+						}
+					],
+					"sid": 441814071337071
+				}
+			],
+			"sid": 728785129327246
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Water",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Sasha",
+							"sid": 692519755154123,
+							"parameters": {
+								"instance-variable": "state",
+								"comparison": 0,
+								"value": "\"Swim\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-max-speed",
+							"objectClass": "SashaShadow",
+							"sid": 601347540936421,
+							"behaviorType": "Platform",
+							"parameters": {
+								"max-speed": "60"
+							}
+						},
+						{
+							"id": "set-acceleration",
+							"objectClass": "SashaShadow",
+							"sid": 827130185846810,
+							"behaviorType": "Platform",
+							"parameters": {
+								"acceleration": "600"
+							}
+						},
+						{
+							"id": "set-deceleration",
+							"objectClass": "SashaShadow",
+							"sid": 395360229910530,
+							"behaviorType": "Platform",
+							"parameters": {
+								"deceleration": "400"
+							}
+						},
+						{
+							"id": "set-max-fall-speed",
+							"objectClass": "SashaShadow",
+							"sid": 454889007884590,
+							"behaviorType": "Platform",
+							"parameters": {
+								"max-fall-speed": "60"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Sasha",
+							"sid": 529075886528398,
+							"parameters": {
+								"instance-variable": "jump",
+								"value": "-400"
+							}
+						}
+					],
+					"sid": 926698447107802
+				}
+			],
+			"sid": 913700323420529
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "States",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Sasha",
+							"sid": 535148253369988,
+							"parameters": {
+								"object": "WaterBKGD"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Sasha",
+							"sid": 521423240255809,
+							"parameters": {
+								"instance-variable": "state",
+								"value": "\"Swim\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Sasha",
+							"sid": 342343330236060,
+							"parameters": {
+								"animation": "\"Swim\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 661642073315586,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 623762858777409,
+									"parameters": {
+										"key": 38
+									}
+								},
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 968095558401062,
+									"parameters": {
+										"object": "jumpshadow"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-vector-y",
+									"objectClass": "SashaShadow",
+									"sid": 820612130815664,
+									"behaviorType": "Platform",
+									"parameters": {
+										"vector-y": "Sasha.jump"
+									}
+								}
+							],
+							"sid": 467478382217507,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 175867631566861,
+									"parameters": {
+										"key": 32
+									}
+								},
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 347009278321836,
+									"parameters": {
+										"object": "speedshadow"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-max-speed",
+									"objectClass": "SashaShadow",
+									"sid": 659543294566450,
+									"behaviorType": "Platform",
+									"parameters": {
+										"max-speed": "450"
+									}
+								}
+							],
+							"sid": 596307243473365,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 456005511961629,
+									"parameters": {
+										"key": 39
+									}
+								},
+								{
+									"id": "is-on-floor",
+									"objectClass": "SashaShadow",
+									"sid": 966749008946077,
+									"behaviorType": "Platform"
+								},
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 804386913256736,
+									"parameters": {
+										"object": "rightshadow"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Sasha",
+									"sid": 253279230535025,
+									"parameters": {
+										"animation": "\"Run\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Sasha",
+									"sid": 357939642194679,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Sasha",
+									"sid": 895553411409659,
+									"parameters": {
+										"instance-variable": "direction",
+										"value": "\"Right\""
+									}
+								}
+							],
+							"sid": 184821837086250,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "SashaShadow",
+									"sid": 931162688139677,
+									"parameters": {
+										"object": "Splash",
+										"layer": "\"Layer 0\"",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-angle",
+									"objectClass": "Splash",
+									"sid": 555943143301689,
+									"parameters": {
+										"angle": "270"
+									}
+								}
+							],
+							"sid": 407642762316051
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 191467726435495,
+									"parameters": {
+										"object": "downshadow"
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 743397788499934,
+									"parameters": {
+										"key": 40
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-max-fall-speed",
+									"objectClass": "SashaShadow",
+									"sid": 553394692241563,
+									"behaviorType": "Platform",
+									"parameters": {
+										"max-fall-speed": "100"
+									}
+								}
+							],
+							"sid": 550212350790175,
+							"isOrBlock": true
+						}
+					],
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Sasha",
+							"sid": 246335922244934,
+							"parameters": {
+								"object": "WaterBKGD"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Sasha",
+							"sid": 293029150245606,
+							"parameters": {
+								"instance-variable": "state",
+								"value": "\"Swim\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Sasha",
+							"sid": 439830748733025,
+							"parameters": {
+								"animation": "\"Swim\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 175210344055734,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-x-seconds",
+									"objectClass": "System",
+									"sid": 763584700265950,
+									"parameters": {
+										"interval-seconds": "1.5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Sasha",
+									"sid": 387514178359816,
+									"parameters": {
+										"object": "bubble",
+										"layer": "0",
+										"image-point": "1",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-angle",
+									"objectClass": "bubble",
+									"sid": 844962921567903,
+									"parameters": {
+										"angle": "270"
+									}
+								}
+							],
+							"sid": 816258276695691
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 416284527731931
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Sasha",
+									"sid": 628934051648517,
+									"parameters": {
+										"object": "Splash",
+										"layer": "0",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-angle",
+									"objectClass": "Splash",
+									"sid": 259383720968818,
+									"parameters": {
+										"angle": "270"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "WaterBKGD",
+									"sid": 444888814685133,
+									"parameters": {
+										"instance-variable": "waves",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 362560727018006
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 812606190705831,
+									"parameters": {
+										"key": 38
+									}
+								},
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 794152020461184,
+									"parameters": {
+										"object": "jumpshadow"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-vector-y",
+									"objectClass": "SashaShadow",
+									"sid": 401970527575005,
+									"behaviorType": "Platform",
+									"parameters": {
+										"vector-y": "Sasha.jump"
+									}
+								}
+							],
+							"sid": 869235418892978,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "SashaShadow",
+									"sid": 225025814807439,
+									"parameters": {
+										"object": "WaterBKGD"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 722036938640471,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 238901792676051,
+											"parameters": {
+												"key": 39
+											}
+										},
+										{
+											"id": "is-touching-object",
+											"objectClass": "Touch",
+											"sid": 282698873218375,
+											"parameters": {
+												"object": "rightshadow"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Sasha",
+											"sid": 686955775470474,
+											"parameters": {
+												"animation": "\"Swim\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-mirrored",
+											"objectClass": "Sasha",
+											"sid": 988677577885331,
+											"parameters": {
+												"state": "not-mirrored"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Sasha",
+											"sid": 787403518726487,
+											"parameters": {
+												"instance-variable": "direction",
+												"value": "\"Right\""
+											}
+										}
+									],
+									"sid": 779224871128618,
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 231510092044132,
+											"parameters": {
+												"key": 37
+											}
+										},
+										{
+											"id": "is-touching-object",
+											"objectClass": "Touch",
+											"sid": 610346337521915,
+											"parameters": {
+												"object": "leftshadow"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Sasha",
+											"sid": 444886618717257,
+											"parameters": {
+												"animation": "\"Swim\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-mirrored",
+											"objectClass": "Sasha",
+											"sid": 343336607130432,
+											"parameters": {
+												"state": "mirrored"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Sasha",
+											"sid": 190191043864265,
+											"parameters": {
+												"instance-variable": "direction",
+												"value": "\"Left\""
+											}
+										}
+									],
+									"sid": 249662623706767,
+									"isOrBlock": true
+								}
+							]
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 125525914041670
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Sasha",
+							"sid": 140796210292537,
+							"parameters": {
+								"instance-variable": "state",
+								"value": "\"Land\""
+							}
+						}
+					],
+					"sid": 227818818459055,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-on-floor",
+									"objectClass": "SashaShadow",
+									"sid": 741536592704992,
+									"behaviorType": "Platform",
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "SashaShadow",
+									"sid": 771607988585502,
+									"parameters": {
+										"animation": "\"Jump\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 462550089403992
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-on-floor",
+									"objectClass": "SashaShadow",
+									"sid": 194526276157101,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [],
+							"sid": 856735417238356,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-key-pressed",
+											"objectClass": "Keyboard",
+											"sid": 797924465019931,
+											"parameters": {
+												"key": 38
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-vector-y",
+											"objectClass": "SashaShadow",
+											"sid": 434054182145560,
+											"behaviorType": "Platform",
+											"parameters": {
+												"vector-y": "Sasha.jump"
+											}
+										}
+									],
+									"sid": 616663943372321
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 630506191888166,
+											"parameters": {
+												"key": 39
+											}
+										},
+										{
+											"id": "key-is-down",
+											"objectClass": "Keyboard",
+											"sid": 666199138560774,
+											"parameters": {
+												"key": 37
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "SashaShadow",
+											"sid": 506876480388765,
+											"parameters": {
+												"animation": "\"Run\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 835204031721391,
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 964448807126757
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "SashaShadow",
+											"sid": 174065933439401,
+											"parameters": {
+												"animation": "\"Idle\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 861415502970648
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 788521171877381
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "MovingPlatform",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "waterPt1",
+							"sid": 610036473440079,
+							"parameters": {
+								"object": "Obj_collisionplt"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "bounce-off-object",
+							"objectClass": "waterPt1",
+							"sid": 845960523292019,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"object": "Obj_collisionplt"
+							}
+						}
+					],
+					"sid": 220558893094640
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "waterPt5",
+							"sid": 738260631239959,
+							"parameters": {
+								"object": "Obj_collisionplt"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "bounce-off-object",
+							"objectClass": "waterPt5",
+							"sid": 412613331844471,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"object": "Obj_collisionplt"
+							}
+						}
+					],
+					"sid": 885122844610170
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "waterpt3",
+							"sid": 277684450917518,
+							"parameters": {
+								"object": "Obj_collisionplt"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "bounce-off-object",
+							"objectClass": "waterpt3",
+							"sid": 457344618001688,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"object": "Obj_collisionplt"
+							}
+						}
+					],
+					"sid": 181049909322219
+				}
+			],
+			"sid": 473460047080071
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Obstacles",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "shark",
+							"sid": 131060157148379,
+							"parameters": {
+								"object": "Obj_collisionplt"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "bounce-off-object",
+							"objectClass": "shark",
+							"sid": 810107554457347,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"object": "Obj_collisionplt"
+							}
+						}
+					],
+					"sid": 568742543239870
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "SashaShadow",
+							"sid": 349105509667816,
+							"parameters": {
+								"object": "HorizontalSpike2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 273687589379895,
+							"parameters": {
+								"variable": "Hero_Health",
+								"value": "1"
+							}
+						},
+						{
+							"id": "flash",
+							"objectClass": "Sasha",
+							"sid": 478509876694793,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.1",
+								"off-time": "0.1",
+								"duration": "3.0"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Health",
+							"sid": 390683885025181,
+							"parameters": {
+								"animation": "\"5 - Sasha.Health\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"callFunction": "Hero_Health_Func",
+							"sid": 592032046463330
+						}
+					],
+					"sid": 432742909439748
+				}
+			],
+			"sid": 422488299727316
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "SashaShadow",
+					"sid": 398772655165059,
+					"parameters": {
+						"object": "shark"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-eventvar",
+					"objectClass": "System",
+					"sid": 106988651418433,
+					"parameters": {
+						"variable": "Hero_Health",
+						"value": "1"
+					}
+				},
+				{
+					"id": "flash",
+					"objectClass": "Sasha",
+					"sid": 974978678992917,
+					"behaviorType": "Flash",
+					"parameters": {
+						"on-time": "0.1",
+						"off-time": "0.1",
+						"duration": "3.0"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "Health",
+					"sid": 175598773385038,
+					"parameters": {
+						"animation": "\"5 - Sasha.Health\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"callFunction": "Hero_Health_Func",
+					"sid": 847543133336138
+				}
+			],
+			"sid": 528236811519613
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-destroyed",
+					"objectClass": "bubble",
+					"sid": 602877457846733
+				}
+			],
+			"actions": [],
+			"sid": 631650515015253
+		},
+		{
+			"eventType": "group",
+			"disabled": true,
+			"title": "Waves",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 300365209843424
+						}
+					],
+					"actions": [
+						{
+							"id": "set-effect-parameter",
+							"objectClass": "WaterBKGD",
+							"sid": 714576491291062,
+							"parameters": {
+								"effect": "\"Water\"",
+								"parameter-index": "8",
+								"value": "WaterBKGD.WaveHeight"
+							}
+						}
+					],
+					"sid": 482006329479975,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "WaterBKGD",
+							"sid": 527816701130083,
+							"parameters": {
+								"instance-variable": "waves"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 537314925703391,
+					"disabled": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "WaterBKGD",
+									"sid": 140111178691074,
+									"parameters": {
+										"instance-variable": "WaveHeight",
+										"comparison": 2,
+										"value": "20"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-instvar",
+									"objectClass": "WaterBKGD",
+									"sid": 668087362516016,
+									"parameters": {
+										"instance-variable": "WaveHeight",
+										"value": "2"
+									}
+								}
+							],
+							"sid": 680821834726951,
+							"disabled": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "WaterBKGD",
+									"sid": 789122989321245,
+									"parameters": {
+										"instance-variable": "WaveHeight",
+										"comparison": 5,
+										"value": "20"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 920822773504899,
+									"parameters": {
+										"seconds": "0.5"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "WaterBKGD",
+									"sid": 854027246509316,
+									"parameters": {
+										"instance-variable": "waves",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 937722026665585,
+							"disabled": true
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "WaterBKGD",
+							"sid": 672523528511664,
+							"parameters": {
+								"instance-variable": "waves"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 170974177045755,
+					"disabled": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "WaterBKGD",
+									"sid": 500240015443330,
+									"parameters": {
+										"instance-variable": "WaveHeight",
+										"comparison": 4,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "WaterBKGD",
+									"sid": 724888938524355,
+									"parameters": {
+										"instance-variable": "WaveHeight",
+										"value": "0.1"
+									}
+								}
+							],
+							"sid": 177268778901091,
+							"disabled": true
+						}
+					]
+				}
+			],
+			"sid": 109132951030064
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "NextLevel",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "SashaShadow",
+							"sid": 108721557130764,
+							"parameters": {
+								"object": "Flag4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 925027737893295,
+							"parameters": {
+								"layout": "LevelComplete4"
+							}
+						}
+					],
+					"sid": 811571019625316
+				}
+			],
+			"sid": 192547277139246
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 226287474526857
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "Lvl4Txt",
+					"sid": 523877915904420,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "TextWindow",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "Lvl4Txt",
+					"sid": 312586789257962,
+					"behaviorType": "Fade"
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "TextWindow",
+					"sid": 398478067173516,
+					"behaviorType": "Fade"
+				}
+			],
+			"sid": 360888366013820
+		}
+	],
+	"sid": 945058671385557
+}

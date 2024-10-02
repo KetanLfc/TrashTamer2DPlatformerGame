@@ -1,0 +1,368 @@
+{
+	"name": "LvlCompSheet3",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 373356076160862
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "LvlCompleteTxtLC1",
+					"sid": 421568176357534,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Window2LC1",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "TrashCollectedTxtLC1",
+					"sid": 453542642495276,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Window2LC1",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "RestartLC1",
+					"sid": 607978015311610,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Window2LC1",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "CoinTotalLC1",
+					"sid": 336389742579978,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Window2LC1",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "TrashTotalLC1",
+					"sid": 509311002340808,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Window2LC1",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "NextLvlBtn1",
+					"sid": 464441685380451,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Window2LC1",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "Coin3LC1",
+					"sid": 810006047744609,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Window2LC1",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "Thrash2LC1",
+					"sid": 211382787197966,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Window2LC1",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "ScoreTxt4LC1",
+					"sid": 736823601450376,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Window2LC1",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "TrashCollected3LC1",
+					"sid": 760851620337205,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Window2LC1",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "NextLvlBtn2",
+					"sid": 611948268841145,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Window2LC1",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "ScoreTxt4LC1",
+					"sid": 961554037949436,
+					"parameters": {
+						"text": "\"x \" & Score"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "TrashCollected3LC1",
+					"sid": 672520939204686,
+					"parameters": {
+						"text": "\"x \" & Trashes"
+					}
+				}
+			],
+			"sid": 674462680264442
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 794209198713187,
+					"parameters": {
+						"object": "RestartLC1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 280267554333851,
+					"parameters": {
+						"seconds": "0.2"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 563072856701876,
+					"parameters": {
+						"layout": "3"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 659194304447224,
+					"parameters": {
+						"variable": "Trashes",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 411990712197111,
+					"parameters": {
+						"variable": "Score",
+						"value": "0"
+					}
+				}
+			],
+			"sid": 507934070497871
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 929346406892312,
+					"parameters": {
+						"variable": "Trashes",
+						"comparison": 5,
+						"value": "12"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 446294545523231,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 812600828676112,
+							"parameters": {
+								"object": "NextLvlBtn1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 610124626702384,
+							"parameters": {
+								"seconds": "0.2"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 388732848337415,
+							"parameters": {
+								"audio-file": "game-level-complete-143022",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 745991860925935,
+							"parameters": {
+								"variable": "Score",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 474013744206056,
+							"parameters": {
+								"variable": "Trashes",
+								"value": "0"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 633693260475828,
+							"parameters": {
+								"layout": "4"
+							}
+						}
+					],
+					"sid": 505356758750020
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 425254451947002
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "LvlCompleteTxtLC1",
+					"sid": 519496682055876,
+					"parameters": {
+						"text": "\"LEVEL FAILED!\""
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "NextLvlBtn1",
+					"sid": 265754988724048,
+					"parameters": {
+						"opacity": "20"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "TrashCollectedTxtLC1",
+					"sid": 201931396255173,
+					"parameters": {
+						"text": "\"Not all trashes collected!\""
+					}
+				}
+			],
+			"sid": 792825685005970
+		}
+	],
+	"sid": 482931072350317
+}

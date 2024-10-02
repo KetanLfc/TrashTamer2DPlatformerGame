@@ -1,0 +1,57 @@
+{
+	"name": "obj_boss_triggerDoor",
+	"plugin-id": "Sprite",
+	"sid": 442523393982629,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 694259646756866
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 144,
+						"height": 218,
+						"originX": 0.7013888888888888,
+						"originY": 0.7889908256880734,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1700140,
+						"collisionPoly": {
+							"points": [
+								0.06944444444444445,
+								0.04128440366972477,
+								0.9652777777777778,
+								0.045871559633027525,
+								0.9652777777777778,
+								0.6376146788990825,
+								0.06944444444444445,
+								0.6376146788990825
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 986921572292785,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

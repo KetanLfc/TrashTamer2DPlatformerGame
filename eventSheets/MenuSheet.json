@@ -1,0 +1,283 @@
+{
+	"name": "MenuSheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 300111160621315
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 857519026510585,
+					"parameters": {
+						"audio-file": "Kirby's Return to Dream Land Title Theme 8 Bit Remix",
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"Music\""
+					}
+				}
+			],
+			"sid": 335583259598014
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Functions2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "FadeIn2",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "tween-one-property",
+							"objectClass": "TB_Fade",
+							"sid": 810574870048196,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetOpacity",
+								"end-value": "0",
+								"time": "0.5",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 638138378471238
+				},
+				{
+					"functionName": "FadeOut2",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "tween-one-property",
+							"objectClass": "TB_Fade",
+							"sid": 169981495077720,
+							"behaviorType": "Tween",
+							"parameters": {
+								"tags": "\"\"",
+								"property": "offsetOpacity",
+								"end-value": "100",
+								"time": "0.5",
+								"ease": "default",
+								"destroy-on-complete": "no",
+								"loop": "no",
+								"ping-pong": "no",
+								"repeat-count": "1"
+							}
+						}
+					],
+					"sid": 743849837111678
+				}
+			],
+			"sid": 804704024892653
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 114023892644825,
+					"parameters": {
+						"object": "StartButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"callFunction": "FadeOut2",
+					"sid": 884534670019375
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 855766041078462,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 352532912632163,
+					"parameters": {
+						"layout": "Gameplay"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 988367902788907,
+					"parameters": {
+						"audio-file": "click4",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 733020374274858
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 923408971320876,
+					"parameters": {
+						"object": "LevelButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 443760203019992,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 840042242673044,
+					"parameters": {
+						"layout": "LevelSelect"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 584006954095967,
+					"parameters": {
+						"audio-file": "click4",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 992762204450942
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 655825168258503,
+					"parameters": {
+						"object": "CreditButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 844837227046072,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 831202254084996,
+					"parameters": {
+						"layout": "CreditPage"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 421272590350096,
+					"parameters": {
+						"audio-file": "click4",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 383007154991227
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 661329910761355,
+					"parameters": {
+						"object": "ControlButton"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 184682178981021,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 739272642164941,
+					"parameters": {
+						"layout": "Controls"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 254463564341895,
+					"parameters": {
+						"audio-file": "click4",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 946230819894287
+		}
+	],
+	"sid": 259040717898982
+}

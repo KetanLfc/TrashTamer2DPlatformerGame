@@ -1,0 +1,57 @@
+{
+	"name": "Icebkgd",
+	"plugin-id": "Sprite",
+	"sid": 904537102911907,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 504988813207067
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 612,
+						"height": 84,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5899582,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.08333301544189453,
+								0.9967317020191866,
+								0.08333342415945871,
+								1,
+								0.9047618593488421,
+								0,
+								0.9166665758405413
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 407984177242502,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

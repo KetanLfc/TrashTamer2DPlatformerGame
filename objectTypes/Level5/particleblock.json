@@ -1,0 +1,65 @@
+{
+	"name": "particleblock",
+	"plugin-id": "Sprite",
+	"sid": 974967564941953,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 401247438657058
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 48,
+						"height": 48,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4235396,
+						"collisionPoly": {
+							"points": [
+								0.07142857142857142,
+								0,
+								0.9571428571428572,
+								0.014285714285714285,
+								1,
+								0.07142857142857142,
+								0.9857142857142858,
+								0.9571428571428572,
+								0.9285714285714286,
+								1,
+								0.04285714285714286,
+								0.9857142857142858,
+								0,
+								0.9285714285714286,
+								0.014285714285714285,
+								0.04285714285714286
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 393012350012768,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

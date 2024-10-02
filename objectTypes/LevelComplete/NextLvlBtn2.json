@@ -1,0 +1,65 @@
+{
+	"name": "NextLvlBtn2",
+	"plugin-id": "Sprite",
+	"sid": 186572899391815,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 334114819779036
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 64,
+						"height": 64,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5995695,
+						"collisionPoly": {
+							"points": [
+								0.71875,
+								0.359375,
+								0.828125,
+								0.4375,
+								0.875,
+								0.484375,
+								0.875,
+								0.53125,
+								0.703125,
+								0.65625,
+								0.640625,
+								0.65625,
+								0.125,
+								0.546875,
+								0.125,
+								0.453125
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 772404369689452,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,3806 @@
+{
+	"name": "Level2",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "MenuSheet"
+		},
+		{
+			"eventType": "variable",
+			"name": "Score",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Increment when a coin is collected",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 707572275339280
+		},
+		{
+			"eventType": "variable",
+			"name": "HiddenLevel1",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "completed hidden level 0 = No | 1 = Yes",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 868956387257965
+		},
+		{
+			"eventType": "variable",
+			"name": "Hero_Health",
+			"type": "number",
+			"initialValue": "5",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 802256747315631
+		},
+		{
+			"eventType": "variable",
+			"name": "isInvincible",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 723935791048265
+		},
+		{
+			"eventType": "variable",
+			"name": "System",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 233704560123549
+		},
+		{
+			"eventType": "variable",
+			"name": "Trashes",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 586960990524614
+		},
+		{
+			"eventType": "variable",
+			"name": "isMuted",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 908146027000645
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 852646271770784
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "Sasha",
+					"sid": 429136905467273,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "SashaShadow",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"callFunction": "FadeIn",
+					"sid": 690170864669704
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 747826653078585,
+					"parameters": {
+						"audio-file": "Kirby's Return to Dream Land Title Theme 8 Bit Remix",
+						"loop": "looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"Music\""
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "tleft",
+					"sid": 717600907978068,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "leftshadow",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "tright",
+					"sid": 232971312543408,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "rightshadow",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "Jump",
+					"sid": 863894427607355,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "jumpshadow",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "down",
+					"sid": 705346841823849,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "downshadow",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "sword",
+					"sid": 677867724246425,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "swordshadow",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "pickUp2",
+					"sid": 285362371714331,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "pickupshadow",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "speed",
+					"sid": 287178399433194,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "speedshadow",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "create-interstitial",
+					"objectClass": "MobileAdvert",
+					"sid": 787863398551954,
+					"parameters": {
+						"advert-id": "\"ca-app-pub-1658783475713454/5917036778\"",
+						"show": "false"
+					}
+				}
+			],
+			"sid": 375389093061733,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 615888471956867,
+							"parameters": {
+								"variable": "HiddenLevel1",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "load",
+							"objectClass": "System",
+							"sid": 731144081781687,
+							"parameters": {
+								"slot": "\"mysave\""
+							}
+						}
+					],
+					"sid": 628962902789361
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-load-complete",
+					"objectClass": "System",
+					"sid": 496576909538620
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "SashaShadow",
+					"sid": 833451675892754,
+					"parameters": {
+						"x": "3030",
+						"y": "265"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "Sasha",
+					"sid": 482926600617782,
+					"parameters": {
+						"x": "3030",
+						"y": "265"
+					}
+				}
+			],
+			"sid": 442126746660887
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Hero Controls",
+			"description": "Animation Controls",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 623588921917619,
+							"parameters": {
+								"key": 39
+							}
+						},
+						{
+							"id": "is-on-floor",
+							"objectClass": "SashaShadow",
+							"sid": 119054265295520,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Sasha",
+							"sid": 930836791935058,
+							"parameters": {
+								"animation": "\"Run\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "Sasha",
+							"sid": 735434455579392,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Sasha",
+							"sid": 611238313992137,
+							"parameters": {
+								"instance-variable": "direction",
+								"value": "\"Right\""
+							}
+						}
+					],
+					"sid": 340697419699911
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 565774833320244,
+							"parameters": {
+								"key": 37
+							}
+						},
+						{
+							"id": "is-on-floor",
+							"objectClass": "SashaShadow",
+							"sid": 511183118565697,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Sasha",
+							"sid": 740918765411958,
+							"parameters": {
+								"animation": "\"Run\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "Sasha",
+							"sid": 429150248769687,
+							"parameters": {
+								"state": "mirrored"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Sasha",
+							"sid": 332406807543046,
+							"parameters": {
+								"instance-variable": "direction",
+								"value": "\"Left\""
+							}
+						}
+					],
+					"sid": 786047231362844
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "SashaShadow",
+							"sid": 261291825973792,
+							"behaviorType": "Platform",
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Sasha",
+							"sid": 933454580833764,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 786138167455625
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 759320275327367,
+							"parameters": {
+								"key": 32
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-max-speed",
+							"objectClass": "SashaShadow",
+							"sid": 147123667659410,
+							"behaviorType": "Platform",
+							"parameters": {
+								"max-speed": "450"
+							}
+						}
+					],
+					"sid": 456930120657642
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 839953837765036
+						}
+					],
+					"actions": [
+						{
+							"id": "set-max-speed",
+							"objectClass": "SashaShadow",
+							"sid": 111420071948105,
+							"behaviorType": "Platform",
+							"parameters": {
+								"max-speed": "330"
+							}
+						}
+					],
+					"sid": 360773128012153
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 591862900989242
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Health",
+							"sid": 226755350157897,
+							"parameters": {
+								"frame-number": "Sasha.Health"
+							}
+						}
+					],
+					"sid": 967025894564611,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 773245827219734,
+									"parameters": {
+										"first-value": "SashaShadow.Platform.MaxSpeed",
+										"comparison": 4,
+										"second-value": "330"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-jump-strength",
+									"objectClass": "SashaShadow",
+									"sid": 538651364424107,
+									"behaviorType": "Platform",
+									"parameters": {
+										"jump-strength": "850"
+									}
+								}
+							],
+							"sid": 533869483636840
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 221378349789912
+								}
+							],
+							"actions": [
+								{
+									"id": "set-jump-strength",
+									"objectClass": "SashaShadow",
+									"sid": 786664211786909,
+									"behaviorType": "Platform",
+									"parameters": {
+										"jump-strength": "650"
+									}
+								}
+							],
+							"sid": 239679615976712
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 463439846617177,
+							"parameters": {
+								"key": 40
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Sasha",
+							"sid": 672162380490147,
+							"parameters": {
+								"animation": "\"Slide\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 817932227542715
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 593658045159064,
+							"parameters": {
+								"key": 68
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Sasha",
+							"sid": 181382789579329,
+							"parameters": {
+								"animation": "\"Walk\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 289718291829286
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 335378885006954,
+							"parameters": {
+								"key": 67
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Sasha",
+							"sid": 886188357981592,
+							"parameters": {
+								"animation": "\"Climb\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 511346090132442
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 367995783149263,
+							"parameters": {
+								"key": 83
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Sasha",
+							"sid": 129034579378599,
+							"parameters": {
+								"animation": "\"Sword\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 484926327948895,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Sasha",
+									"sid": 394772790968959,
+									"parameters": {
+										"object": "Enemy"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-collisions-enabled",
+									"objectClass": "Enemy",
+									"sid": 269717944582199,
+									"parameters": {
+										"collisions": "disabled"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "Enemy",
+									"sid": 741582301215826,
+									"behaviorType": "Platform",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Enemy",
+									"sid": 482473312208319,
+									"parameters": {
+										"animation": "\"Die\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "EnemyWeapon",
+									"sid": 517698764879649
+								},
+								{
+									"id": "start-fade",
+									"objectClass": "Enemy",
+									"sid": 667794186264778,
+									"behaviorType": "Fade"
+								}
+							],
+							"sid": 775435044619758,
+							"isOrBlock": true
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 730450296784370,
+							"parameters": {
+								"key": 38
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Sasha",
+							"sid": 813679530744357,
+							"parameters": {
+								"animation": "\"Jump\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 533431580071316
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 688609012492225,
+							"parameters": {
+								"key": 40
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "SashaShadow",
+							"sid": 894038423968653,
+							"parameters": {
+								"object": "Pipe"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-ignoring-input",
+							"objectClass": "SashaShadow",
+							"sid": 654659233928822,
+							"disabled": true,
+							"behaviorType": "Platform",
+							"parameters": {
+								"input": "start-ignoring"
+							}
+						},
+						{
+							"id": "move-to-bottom",
+							"objectClass": "Sasha",
+							"sid": 862235634801491,
+							"disabled": true
+						},
+						{
+							"id": "unpin",
+							"objectClass": "Sasha",
+							"sid": 535878389606688,
+							"disabled": true,
+							"behaviorType": "Pin"
+						},
+						{
+							"id": "start",
+							"objectClass": "Sasha",
+							"sid": 460213268850600,
+							"behaviorType": "LiteTween",
+							"parameters": {
+								"start-mode": "resume-at-current-progress",
+								"force-use-current": "start-from-current"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 117358382194031,
+							"parameters": {
+								"seconds": "0.5"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 208406193866240,
+							"parameters": {
+								"layout": "HiddenLevel1"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 510685933250936,
+							"parameters": {
+								"audio-file": "game-bonus-144751",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "save",
+							"objectClass": "System",
+							"sid": 193371783942711,
+							"parameters": {
+								"slot": "\"mysave\""
+							}
+						}
+					],
+					"sid": 508499380947835
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 968842506112243
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Sasha",
+							"sid": 343207762737322,
+							"parameters": {
+								"animation": "\"Attack\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 398042979024959
+				}
+			],
+			"sid": 746311102633456
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "VerticalPlatform",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "MovingPlatform",
+							"sid": 506808498862742,
+							"parameters": {
+								"object": "Obj_platformcollision"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "bounce-off-object",
+							"objectClass": "MovingPlatform",
+							"sid": 943969272807980,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"object": "Obj_platformcollision"
+							}
+						}
+					],
+					"sid": 462213549588925
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [],
+					"sid": 166678495815347
+				}
+			],
+			"sid": 290205921211357
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "HeroHealth",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "SashaShadow",
+							"sid": 500122855360177,
+							"parameters": {
+								"object": "Dangers"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "Hero_Health_Func",
+							"sid": 546197129627020
+						},
+						{
+							"id": "flash",
+							"objectClass": "Sasha",
+							"sid": 535717100583965,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.1",
+								"off-time": "0.1",
+								"duration": "3.0"
+							}
+						}
+					],
+					"sid": 643860786265961
+				}
+			],
+			"sid": 392340566292066
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Functions",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "FadeIn",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 460040090277461
+				},
+				{
+					"functionName": "FadeOut",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 703529066929339
+				}
+			],
+			"sid": 308709638417293
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Tile Collision",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "SashaShadow",
+							"sid": 188214147618943,
+							"parameters": {
+								"object": "Trigger_break"
+							}
+						},
+						{
+							"id": "pick-nearestfurthest",
+							"objectClass": "Tile1",
+							"sid": 467600973802341,
+							"parameters": {
+								"which": "nearest",
+								"x": "SashaShadow.X",
+								"y": "SashaShadow.Y"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Sasha",
+							"sid": 804294541771961,
+							"parameters": {
+								"animation": "\"Collision\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Tile1",
+							"sid": 848158994777170,
+							"parameters": {
+								"object": "ParticlesBlock",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "ParticlesBlock",
+							"sid": 966691780920914,
+							"parameters": {
+								"angle": "270"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Tile1",
+							"sid": 252809289974929
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Trigger_break",
+							"sid": 635068424537585
+						}
+					],
+					"sid": 322640854126231
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "SashaShadow",
+							"sid": 543901406430115,
+							"parameters": {
+								"object": "Tiles"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Sasha",
+							"sid": 670425305067344,
+							"parameters": {
+								"animation": "\"Collision\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 210628493343292
+				}
+			],
+			"sid": 853620925850443
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Bonus Box Collision",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "SashaShadow",
+							"sid": 716060188613426,
+							"parameters": {
+								"object": "BonusBoxTrigger"
+							}
+						},
+						{
+							"id": "pick-nearestfurthest",
+							"objectClass": "BonusBox",
+							"sid": 236813144673074,
+							"parameters": {
+								"which": "nearest",
+								"x": "SashaShadow.X",
+								"y": "SashaShadow.Y"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Sasha",
+							"sid": 808747266870013,
+							"parameters": {
+								"animation": "\"Collision\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "BonusBox",
+							"sid": 565887829486077,
+							"parameters": {
+								"object": "SpCoin",
+								"layer": "0",
+								"image-point": "1",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "Coin",
+							"sid": 354682343077188,
+							"behaviorType": "Fade"
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "BonusBox",
+							"sid": 583488201153050,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "start",
+							"objectClass": "BonusBox",
+							"sid": 927968178145983,
+							"behaviorType": "LiteTween",
+							"parameters": {
+								"start-mode": "ping-pong",
+								"force-use-current": "start-from-last-recorded"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 552931824882493,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "BonusBox",
+							"sid": 285769638518787,
+							"behaviorType": "LiteTween",
+							"parameters": {
+								"stop-mode": "stop-at-tween-start"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "BonusBoxTrigger",
+							"sid": 442476405386275
+						}
+					],
+					"sid": 911382061135732
+				}
+			],
+			"sid": 103523741401036
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Hero Health",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Sasha",
+							"sid": 190886588480725,
+							"parameters": {
+								"instance-variable": "Health",
+								"comparison": 5,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Sasha",
+							"sid": 915418569260742
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 227873086645733,
+							"parameters": {
+								"audio-file": "game over - sound effect",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 814279253281981,
+							"parameters": {
+								"seconds": "0.2"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 738541907946361,
+							"parameters": {
+								"layer": "\"PopUp\"",
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 731088841057533
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Sasha",
+							"sid": 900123487939770,
+							"parameters": {
+								"instance-variable": "Health",
+								"comparison": 2,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Sasha",
+							"sid": 367511508430993,
+							"parameters": {
+								"instance-variable": "Health",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 325465599273863
+				},
+				{
+					"functionName": "Hero_Health_Func",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 630173730748632,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 735774876461419
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-instvar",
+									"objectClass": "Sasha",
+									"sid": 774950438645905,
+									"parameters": {
+										"instance-variable": "Health",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 243246499808230
+						}
+					]
+				}
+			],
+			"sid": 244129038247665
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Enemy Commands",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Enemy",
+							"sid": 211773681581083,
+							"parameters": {
+								"instance-variable": "Direction",
+								"comparison": 0,
+								"value": "\"Right\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Enemy",
+							"sid": 794998574117295,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "right"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "Enemy",
+							"sid": 417929377527552,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 436872873375957
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Enemy",
+							"sid": 333990893898112,
+							"parameters": {
+								"instance-variable": "Direction",
+								"comparison": 0,
+								"value": "\"Left\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Enemy",
+							"sid": 881179681450482,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "left"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "Enemy",
+							"sid": 410154917785441,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 942332628576077
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Enemy",
+							"sid": 986472139137862,
+							"parameters": {
+								"object": "EnemyBarrier"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 672588288605398,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Enemy",
+									"sid": 370322008754050,
+									"parameters": {
+										"instance-variable": "Direction",
+										"comparison": 0,
+										"value": "\"Right\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Enemy",
+									"sid": 862947105604292,
+									"parameters": {
+										"animation": "\"Walk\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Enemy",
+									"sid": 811065883375983,
+									"parameters": {
+										"instance-variable": "Direction",
+										"value": "\"Left\""
+									}
+								}
+							],
+							"sid": 632577844637995
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 417260281701709
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Enemy",
+									"sid": 491773212234450,
+									"parameters": {
+										"animation": "\"Walk\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Enemy",
+									"sid": 725983179930393,
+									"parameters": {
+										"instance-variable": "Direction",
+										"value": "\"Right\""
+									}
+								}
+							],
+							"sid": 752739479836074
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-los-to-object",
+							"objectClass": "Enemy",
+							"sid": 802573268525665,
+							"behaviorType": "LineOfSight",
+							"parameters": {
+								"object": "SashaShadow",
+								"image-point": "0"
+							}
+						},
+						{
+							"id": "is-animation-playing",
+							"objectClass": "Enemy",
+							"sid": 140664776683856,
+							"parameters": {
+								"animation": "\"Die\""
+							},
+							"isInverted": true
+						},
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 243741461345393,
+							"parameters": {
+								"interval-seconds": "1.0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Enemy",
+							"sid": 644030645483232,
+							"parameters": {
+								"object": "EnemyWeapon",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-angle-toward-position",
+							"objectClass": "EnemyWeapon",
+							"sid": 286971629495954,
+							"parameters": {
+								"x": "SashaShadow.X",
+								"y": "SashaShadow.Y"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "EnemyWeapon",
+							"sid": 564766963567633,
+							"parameters": {
+								"angle": "clamp(EnemyWeapon.Angle,90,270)"
+							}
+						},
+						{
+							"id": "set-angle-toward-position",
+							"objectClass": "EnemyWeapon",
+							"sid": 925716374811237,
+							"parameters": {
+								"x": "SashaShadow.X",
+								"y": "SashaShadow.Y"
+							}
+						}
+					],
+					"sid": 827506870328693
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [],
+					"sid": 384670187310265
+				}
+			],
+			"sid": 987290372751130
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Hero Collision with Objects",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "SashaShadow",
+							"sid": 507993269660169,
+							"parameters": {
+								"object": "Enemy"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 387822110017364,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-falling",
+									"objectClass": "SashaShadow",
+									"sid": 243911931291669,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-collisions-enabled",
+									"objectClass": "Enemy",
+									"sid": 606647140719816,
+									"parameters": {
+										"collisions": "disabled"
+									}
+								},
+								{
+									"id": "set-enabled",
+									"objectClass": "Enemy",
+									"sid": 213854580194144,
+									"behaviorType": "Platform",
+									"parameters": {
+										"state": "disabled"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "Enemy",
+									"sid": 668276205524100,
+									"parameters": {
+										"animation": "\"Die\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "EnemyWeapon",
+									"sid": 972622868177424
+								},
+								{
+									"id": "start-fade",
+									"objectClass": "Enemy",
+									"sid": 504222448461236,
+									"behaviorType": "Fade"
+								},
+								{
+									"id": "set-vector-y",
+									"objectClass": "SashaShadow",
+									"sid": 693134713545449,
+									"behaviorType": "Platform",
+									"parameters": {
+										"vector-y": "-650"
+									}
+								}
+							],
+							"sid": 449228660457441
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "SashaShadow",
+							"sid": 602336022988284,
+							"parameters": {
+								"object": "Coin"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 793955877497671,
+							"parameters": {
+								"variable": "Score",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "ScoreTxt",
+							"sid": 544247924591618,
+							"parameters": {
+								"text": "\"x \" & Score"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Coin",
+							"sid": 508884253900257
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 780569612364957,
+							"parameters": {
+								"audio-file": "Retro Game Coin Sound Effect",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 323294684564537
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "SashaShadow",
+							"sid": 184307162665583,
+							"parameters": {
+								"object": "deathlyRock"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 874124841847397,
+							"parameters": {
+								"variable": "Hero_Health",
+								"value": "1"
+							}
+						},
+						{
+							"id": "flash",
+							"objectClass": "Sasha",
+							"sid": 994827610485781,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.1",
+								"off-time": "0.1",
+								"duration": "3.0"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Health",
+							"sid": 692717346406961,
+							"parameters": {
+								"animation": "\"5 - Sasha.Health\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"callFunction": "Hero_Health_Func",
+							"sid": 191247611205325
+						}
+					],
+					"sid": 301996160236379
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "SashaShadow",
+							"sid": 280236610581263,
+							"parameters": {
+								"object": "Trashes"
+							}
+						},
+						{
+							"id": "is-on-android",
+							"objectClass": "PlatformInfo",
+							"sid": 325135242117927,
+							"isInverted": true
+						},
+						{
+							"id": "is-on-ios",
+							"objectClass": "PlatformInfo",
+							"sid": 813182823261809,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 643580498951835,
+							"parameters": {
+								"variable": "Trashes",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "TrashCollected",
+							"sid": 534908444991540,
+							"parameters": {
+								"text": "\"x \" & Trashes"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Trashes",
+							"sid": 374195734906105
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 924610093203218,
+							"parameters": {
+								"audio-file": "Retro Game Coin Sound Effect",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 344911558425632
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "SashaShadow",
+							"sid": 529278351101919,
+							"parameters": {
+								"object": "SpCoin"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 564970902349202,
+							"parameters": {
+								"variable": "Score",
+								"value": "5"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "ScoreTxt",
+							"sid": 401869320076474,
+							"parameters": {
+								"text": "\"Score:\" & Score"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "SpCoin",
+							"sid": 128728608796593
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 383120651955243,
+							"parameters": {
+								"audio-file": "Retro Game Coin Sound Effect",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 690184625933242
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Enemy",
+							"sid": 188590640859368,
+							"parameters": {
+								"object": "SashaShadow"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "Hero_Health_Func",
+							"sid": 922867912586291
+						},
+						{
+							"id": "flash",
+							"objectClass": "Sasha",
+							"sid": 683229974731372,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.1",
+								"off-time": "0.1",
+								"duration": "3.0"
+							}
+						}
+					],
+					"sid": 475131088849423
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "SashaShadow",
+							"sid": 897027666238333,
+							"parameters": {
+								"object": "rockyTrigger_break"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Sasha",
+							"sid": 967682066323313,
+							"parameters": {
+								"animation": "\"collision\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 761093107437940,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-nearestfurthest",
+									"objectClass": "RockyTile",
+									"sid": 629722614948442,
+									"parameters": {
+										"which": "nearest",
+										"x": "SashaShadow.X",
+										"y": "SashaShadow.Y"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "RockyTile",
+									"sid": 361737157251349,
+									"parameters": {
+										"object": "RockyTileParticle",
+										"layer": "0",
+										"image-point": "0",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-angle",
+									"objectClass": "RockyTileParticle",
+									"sid": 210561759499424,
+									"parameters": {
+										"angle": "270"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "RockyTile",
+									"sid": 602804825026146
+								},
+								{
+									"id": "destroy",
+									"objectClass": "rockyTrigger_break",
+									"sid": 476814907158394
+								}
+							],
+							"sid": 216680331664998
+						}
+					]
+				}
+			],
+			"sid": 728991286487671
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "SashaShadow",
+					"sid": 113331100407987,
+					"parameters": {
+						"object": "Flag"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 489878035000002,
+					"parameters": {
+						"layout": "LevelComplete2"
+					}
+				}
+			],
+			"sid": 237568857167326
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "PopUp",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 904745044390487
+						}
+					],
+					"actions": [
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "GameOverTxt2",
+							"sid": 879173200894635,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "Window",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "FailedToTxt2",
+							"sid": 177597722546250,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "Window",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "RestartBtn",
+							"sid": 780610143383303,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "Window",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "MenuTxt",
+							"sid": 441376176786374,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "MainMenuBtn",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "MainMenuBtn",
+							"sid": 949015759074941,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "Window",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						}
+					],
+					"sid": 833965921559192
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 701226034117144
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 952390634550539,
+							"parameters": {
+								"layer": "\"PopUp\"",
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 177509664458234
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 773621617481350,
+							"parameters": {
+								"layer": "\"PopUp\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "SashaShadow",
+							"sid": 921728949314993,
+							"behaviorType": "Platform",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 403637455061458,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 854695923756998,
+									"parameters": {
+										"object": "RestartBtn"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 587216790399466,
+									"parameters": {
+										"seconds": "0.2"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 904000388301715,
+									"parameters": {
+										"variable": "HiddenLevel1",
+										"value": "0"
+									}
+								},
+								{
+									"id": "restart-layout",
+									"objectClass": "System",
+									"sid": 491074390714616
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 960437208626648,
+									"parameters": {
+										"variable": "Score",
+										"value": "0"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 229108029581046,
+									"parameters": {
+										"variable": "Trashes",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 517681258882011
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 259025811596517,
+									"parameters": {
+										"object": "MainMenuBtn"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 146744952839874,
+									"parameters": {
+										"layout": "Menu"
+									}
+								}
+							],
+							"sid": 190915547119807
+						}
+					]
+				}
+			],
+			"sid": 568697840056140
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-android",
+					"objectClass": "PlatformInfo",
+					"sid": 956681432420830
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "tleft",
+					"sid": 773667600704001,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "tright",
+					"sid": 134684045450995,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Jump",
+					"sid": 168296964379988,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "down",
+					"sid": 847814442645941,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "pickUp2",
+					"sid": 395477953785685,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "sword",
+					"sid": 463490203545319,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "speed",
+					"sid": 754021177982487,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 695784743109656,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "MobileControls4",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 463665201475889,
+									"parameters": {
+										"object": "rightshadow"
+									}
+								},
+								{
+									"id": "is-on-floor",
+									"objectClass": "SashaShadow",
+									"sid": 227220420865322,
+									"disabled": true,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Sasha",
+									"sid": 556011187232279,
+									"parameters": {
+										"animation": "\"Run\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Sasha",
+									"sid": 464904885533444,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "SashaShadow",
+									"sid": 685334697783613,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "right"
+									}
+								}
+							],
+							"sid": 372464762493287,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-touching-object",
+											"objectClass": "Touch",
+											"sid": 161827710627863,
+											"parameters": {
+												"object": "jumpshadow"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Sasha",
+											"sid": 336531725770616,
+											"parameters": {
+												"animation": "\"Jump\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "simulate-control",
+											"objectClass": "SashaShadow",
+											"sid": 852177109180188,
+											"behaviorType": "Platform",
+											"parameters": {
+												"control": "jump"
+											}
+										}
+									],
+									"sid": 343912596220803,
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-touching-object",
+											"objectClass": "Touch",
+											"sid": 877642571711856,
+											"parameters": {
+												"object": "downshadow"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Sasha",
+											"sid": 777407676852707,
+											"parameters": {
+												"animation": "\"Slide\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 212956528081589
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 379969235689009,
+									"parameters": {
+										"object": "leftshadow"
+									}
+								},
+								{
+									"id": "is-on-floor",
+									"objectClass": "SashaShadow",
+									"sid": 775566825534408,
+									"disabled": true,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Sasha",
+									"sid": 343221836809210,
+									"parameters": {
+										"animation": "\"Run\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Sasha",
+									"sid": 491558796306802,
+									"parameters": {
+										"state": "mirrored"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "SashaShadow",
+									"sid": 464875333437971,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "left"
+									}
+								}
+							],
+							"sid": 848692001268175,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-touching-object",
+											"objectClass": "Touch",
+											"sid": 322488680696701,
+											"parameters": {
+												"object": "jumpshadow"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Sasha",
+											"sid": 429822967132066,
+											"parameters": {
+												"animation": "\"Jump\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "simulate-control",
+											"objectClass": "SashaShadow",
+											"sid": 591369361668519,
+											"behaviorType": "Platform",
+											"parameters": {
+												"control": "jump"
+											}
+										}
+									],
+									"sid": 158732426813592
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-touching-object",
+											"objectClass": "Touch",
+											"sid": 705047099347293,
+											"parameters": {
+												"object": "downshadow"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Sasha",
+											"sid": 144962236248388,
+											"parameters": {
+												"animation": "\"Slide\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 659672604974414
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 468235493675474,
+									"parameters": {
+										"object": "jumpshadow"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Sasha",
+									"sid": 929529471218472,
+									"parameters": {
+										"animation": "\"Jump\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "SashaShadow",
+									"sid": 182579348289864,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "jump"
+									}
+								}
+							],
+							"sid": 564430714792550
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 713056579089210,
+									"parameters": {
+										"object": "downshadow"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "SashaShadow",
+									"sid": 697447359612167,
+									"parameters": {
+										"object": "Pipe"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-ignoring-input",
+									"objectClass": "SashaShadow",
+									"sid": 666524550481204,
+									"disabled": true,
+									"behaviorType": "Platform",
+									"parameters": {
+										"input": "start-ignoring"
+									}
+								},
+								{
+									"id": "move-to-bottom",
+									"objectClass": "Sasha",
+									"sid": 287761053874249,
+									"disabled": true
+								},
+								{
+									"id": "unpin",
+									"objectClass": "Sasha",
+									"sid": 955496430865459,
+									"disabled": true,
+									"behaviorType": "Pin"
+								},
+								{
+									"id": "start",
+									"objectClass": "Sasha",
+									"sid": 634351973210599,
+									"behaviorType": "LiteTween",
+									"parameters": {
+										"start-mode": "resume-at-current-progress",
+										"force-use-current": "start-from-current"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 967610240204240,
+									"parameters": {
+										"seconds": "0.5"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 779550483612472,
+									"parameters": {
+										"layout": "HiddenLevel1"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 379453468188790,
+									"parameters": {
+										"audio-file": "game-bonus-144751",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "save",
+									"objectClass": "System",
+									"sid": 449881300953302,
+									"parameters": {
+										"slot": "\"mysave\""
+									}
+								}
+							],
+							"sid": 309721857544957
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 524636162215711,
+									"parameters": {
+										"object": "speedshadow"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-max-speed",
+									"objectClass": "SashaShadow",
+									"sid": 338624316202000,
+									"behaviorType": "Platform",
+									"parameters": {
+										"max-speed": "450"
+									}
+								},
+								{
+									"id": "set-jump-strength",
+									"objectClass": "SashaShadow",
+									"sid": 377795205693829,
+									"behaviorType": "Platform",
+									"parameters": {
+										"jump-strength": "850"
+									}
+								}
+							],
+							"sid": 775605738027497
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 996560279534920,
+									"parameters": {
+										"object": "swordshadow"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Sasha",
+									"sid": 497996393918089,
+									"parameters": {
+										"animation": "\"Sword\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 878777103294598,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "Sasha",
+											"sid": 640219396818693,
+											"parameters": {
+												"object": "Enemy"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-collisions-enabled",
+											"objectClass": "Enemy",
+											"sid": 981125081159635,
+											"parameters": {
+												"collisions": "disabled"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "Enemy",
+											"sid": 990684022459266,
+											"behaviorType": "Platform",
+											"parameters": {
+												"state": "disabled"
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Enemy",
+											"sid": 423333551672246,
+											"parameters": {
+												"animation": "\"Die\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "start-fade",
+											"objectClass": "Enemy",
+											"sid": 325573118963917,
+											"behaviorType": "Fade"
+										},
+										{
+											"id": "destroy",
+											"objectClass": "EnemyWeapon",
+											"sid": 319380544778508
+										}
+									],
+									"sid": 635426377231376,
+									"isOrBlock": true
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "SashaShadow",
+									"sid": 126653499296511,
+									"parameters": {
+										"object": "Trashes"
+									}
+								},
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 872479947089343,
+									"parameters": {
+										"object": "pickupshadow"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 315184661640742,
+									"parameters": {
+										"variable": "Trashes",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "TrashCollected",
+									"sid": 232363033992710,
+									"parameters": {
+										"text": "\"x \" & Trashes"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Trashes",
+									"sid": 383461322481178
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 645008986190181,
+									"parameters": {
+										"audio-file": "Retro Game Coin Sound Effect",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 288767554496950
+						}
+					],
+					"sid": 815571740478857
+				}
+			],
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-ios",
+					"objectClass": "PlatformInfo",
+					"sid": 360588891218664
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "sword",
+					"sid": 730869411835059,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "pickUp2",
+					"sid": 885869377660378,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "down",
+					"sid": 333615804060875,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Jump",
+					"sid": 426386757210796,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "tright",
+					"sid": 321962272864285,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "tleft",
+					"sid": 960748832264191,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "speed",
+					"sid": 280475483061864,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 924478739485990,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "MobileControls5",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 864603621182325,
+									"parameters": {
+										"object": "rightshadow"
+									}
+								},
+								{
+									"id": "is-on-floor",
+									"objectClass": "SashaShadow",
+									"sid": 456302630698408,
+									"disabled": true,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Sasha",
+									"sid": 402357283148061,
+									"parameters": {
+										"animation": "\"Run\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Sasha",
+									"sid": 427078137927941,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "SashaShadow",
+									"sid": 272810824771765,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "right"
+									}
+								}
+							],
+							"sid": 900156949728122,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-touching-object",
+											"objectClass": "Touch",
+											"sid": 201022186256008,
+											"parameters": {
+												"object": "jumpshadow"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Sasha",
+											"sid": 377368833501747,
+											"parameters": {
+												"animation": "\"Jump\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "simulate-control",
+											"objectClass": "SashaShadow",
+											"sid": 299697074211162,
+											"behaviorType": "Platform",
+											"parameters": {
+												"control": "jump"
+											}
+										}
+									],
+									"sid": 782177655105861,
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-touching-object",
+											"objectClass": "Touch",
+											"sid": 511297837302707,
+											"parameters": {
+												"object": "downshadow"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Sasha",
+											"sid": 573089547396313,
+											"parameters": {
+												"animation": "\"Slide\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 408880786325361
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 248199890260128,
+									"parameters": {
+										"object": "leftshadow"
+									}
+								},
+								{
+									"id": "is-on-floor",
+									"objectClass": "SashaShadow",
+									"sid": 886906762318383,
+									"disabled": true,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Sasha",
+									"sid": 521149330957453,
+									"parameters": {
+										"animation": "\"Run\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Sasha",
+									"sid": 443894157849942,
+									"parameters": {
+										"state": "mirrored"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "SashaShadow",
+									"sid": 338015159351916,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "left"
+									}
+								}
+							],
+							"sid": 600347613188645,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-touching-object",
+											"objectClass": "Touch",
+											"sid": 730625887736188,
+											"parameters": {
+												"object": "jumpshadow"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Sasha",
+											"sid": 950333858305285,
+											"parameters": {
+												"animation": "\"Jump\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "simulate-control",
+											"objectClass": "SashaShadow",
+											"sid": 165477332900811,
+											"behaviorType": "Platform",
+											"parameters": {
+												"control": "jump"
+											}
+										}
+									],
+									"sid": 570994591104310
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-touching-object",
+											"objectClass": "Touch",
+											"sid": 330678211382807,
+											"parameters": {
+												"object": "downshadow"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Sasha",
+											"sid": 113775990920058,
+											"parameters": {
+												"animation": "\"Slide\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 889131414268172
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 648525781799677,
+									"parameters": {
+										"object": "jumpshadow"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Sasha",
+									"sid": 110730135639160,
+									"parameters": {
+										"animation": "\"Jump\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "SashaShadow",
+									"sid": 378649758335751,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "jump"
+									}
+								}
+							],
+							"sid": 473464957582191
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 309461580135051,
+									"parameters": {
+										"object": "downshadow"
+									}
+								},
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "SashaShadow",
+									"sid": 974758307906436,
+									"parameters": {
+										"object": "Pipe"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-ignoring-input",
+									"objectClass": "SashaShadow",
+									"sid": 401568942063787,
+									"disabled": true,
+									"behaviorType": "Platform",
+									"parameters": {
+										"input": "start-ignoring"
+									}
+								},
+								{
+									"id": "move-to-bottom",
+									"objectClass": "Sasha",
+									"sid": 911427091468119,
+									"disabled": true
+								},
+								{
+									"id": "unpin",
+									"objectClass": "Sasha",
+									"sid": 975645428632000,
+									"disabled": true,
+									"behaviorType": "Pin"
+								},
+								{
+									"id": "start",
+									"objectClass": "Sasha",
+									"sid": 966599173332645,
+									"behaviorType": "LiteTween",
+									"parameters": {
+										"start-mode": "resume-at-current-progress",
+										"force-use-current": "start-from-current"
+									}
+								},
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 652175141214204,
+									"parameters": {
+										"seconds": "0.5"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 289193241638993,
+									"parameters": {
+										"layout": "HiddenLevel1"
+									}
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 758533219548484,
+									"parameters": {
+										"audio-file": "game-bonus-144751",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "save",
+									"objectClass": "System",
+									"sid": 905869233264334,
+									"parameters": {
+										"slot": "\"mysave\""
+									}
+								}
+							],
+							"sid": 722339244562262
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 139458532529560,
+									"parameters": {
+										"object": "speedshadow"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-max-speed",
+									"objectClass": "SashaShadow",
+									"sid": 100306683181946,
+									"behaviorType": "Platform",
+									"parameters": {
+										"max-speed": "450"
+									}
+								},
+								{
+									"id": "set-jump-strength",
+									"objectClass": "SashaShadow",
+									"sid": 445650063309180,
+									"behaviorType": "Platform",
+									"parameters": {
+										"jump-strength": "850"
+									}
+								}
+							],
+							"sid": 454182320496635
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 729148296045812,
+									"parameters": {
+										"object": "swordshadow"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Sasha",
+									"sid": 117895817561067,
+									"parameters": {
+										"animation": "\"Sword\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 607433506177808,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "SashaShadow",
+											"sid": 267267553800949,
+											"parameters": {
+												"object": "Enemy"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-collisions-enabled",
+											"objectClass": "Enemy",
+											"sid": 877105663557491,
+											"parameters": {
+												"collisions": "disabled"
+											}
+										},
+										{
+											"id": "set-enabled",
+											"objectClass": "Enemy",
+											"sid": 893844781022771,
+											"behaviorType": "Platform",
+											"parameters": {
+												"state": "disabled"
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "Enemy",
+											"sid": 957242146748659,
+											"parameters": {
+												"animation": "\"Die\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "start-fade",
+											"objectClass": "Enemy",
+											"sid": 953212478321354,
+											"behaviorType": "Fade"
+										},
+										{
+											"id": "destroy",
+											"objectClass": "EnemyWeapon",
+											"sid": 546517343783385
+										}
+									],
+									"sid": 208804515413915
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "SashaShadow",
+									"sid": 606813025184357,
+									"parameters": {
+										"object": "Trashes"
+									}
+								},
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 480639755574359,
+									"parameters": {
+										"object": "pickupshadow"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 857230086087079,
+									"parameters": {
+										"variable": "Trashes",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "TrashCollected",
+									"sid": 658748366345211,
+									"parameters": {
+										"text": "\"x \" & Trashes"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Trashes",
+									"sid": 596455683826835
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 784252522300940,
+									"parameters": {
+										"audio-file": "Retro Game Coin Sound Effect",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 940776564354301
+						}
+					],
+					"sid": 762161050019028
+				}
+			],
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-end-of-layout",
+					"objectClass": "System",
+					"sid": 434908146592078
+				}
+			],
+			"actions": [
+				{
+					"id": "show-interstitial",
+					"objectClass": "MobileAdvert",
+					"sid": 748981374976381
+				}
+			],
+			"sid": 754854232163569
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-interstitial-failed-to-load",
+					"objectClass": "MobileAdvert",
+					"sid": 416487974375227
+				}
+			],
+			"actions": [
+				{
+					"id": "create-interstitial",
+					"objectClass": "MobileAdvert",
+					"sid": 793983489317856,
+					"parameters": {
+						"advert-id": "\"ca-app-pub-1658783475713454/5917036778\"",
+						"show": "false"
+					}
+				}
+			],
+			"sid": 988830801955013
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Pause",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 213941798896373,
+							"parameters": {
+								"object": "Pausebtn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 214219859905549,
+							"parameters": {
+								"time-scale": "0"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 255741661089925,
+							"parameters": {
+								"layer": "\"Pause\"",
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 511337596607956
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 754436424414857,
+							"parameters": {
+								"layer": "\"Pause\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-opacity",
+							"objectClass": "System",
+							"sid": 474903232295302,
+							"parameters": {
+								"layer": "0",
+								"opacity": "50"
+							}
+						}
+					],
+					"sid": 246173909400891,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 452110343300440,
+									"parameters": {
+										"object": "PlayButton"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 629421983208347,
+									"parameters": {
+										"audio-file": "click4",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 792339427522510,
+									"parameters": {
+										"layer": "\"Pause\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-time-scale",
+									"objectClass": "System",
+									"sid": 507484930576891,
+									"parameters": {
+										"time-scale": "1.0"
+									}
+								}
+							],
+							"sid": 821053259315719
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 638849899936163,
+									"parameters": {
+										"object": "RetryButton"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 815597969720721,
+									"parameters": {
+										"audio-file": "click4",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 342687507642646,
+									"parameters": {
+										"layer": "\"Pause\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-time-scale",
+									"objectClass": "System",
+									"sid": 472137782243126,
+									"parameters": {
+										"time-scale": "1.0"
+									}
+								},
+								{
+									"id": "restart-layout",
+									"objectClass": "System",
+									"sid": 403263343643978
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 303416576211653,
+									"parameters": {
+										"variable": "isMuted",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 155165859251751
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 414516233406068,
+									"parameters": {
+										"object": "MenuButton"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 487347718086456,
+									"parameters": {
+										"audio-file": "click4",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 588534820452075,
+									"parameters": {
+										"layer": "\"Pause\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-time-scale",
+									"objectClass": "System",
+									"sid": 405936717750637,
+									"parameters": {
+										"time-scale": "1.0"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 508073317185766,
+									"parameters": {
+										"layout": "Menu"
+									}
+								}
+							],
+							"sid": 490275273306728
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 478244605634940
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-opacity",
+							"objectClass": "System",
+							"sid": 846266196347512,
+							"parameters": {
+								"layer": "0",
+								"opacity": "100"
+							}
+						}
+					],
+					"sid": 555670994945894
+				}
+			],
+			"sid": 315213836027613
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 415278930972645,
+					"parameters": {
+						"object": "MuteIcon"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 100885060249325,
+					"parameters": {
+						"audio-file": "click4",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 385036416063841,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 311244792118129,
+							"parameters": {
+								"variable": "isMuted",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "MuteIcon",
+							"sid": 637766838826539,
+							"parameters": {
+								"animation": "\"Mute\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 722592645167408,
+							"parameters": {
+								"variable": "isMuted",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-muted",
+							"objectClass": "Audio",
+							"sid": 682524500354880,
+							"parameters": {
+								"tag": "\"Music\"",
+								"state": "muted"
+							}
+						}
+					],
+					"sid": 501989923438231
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 430041817498205
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 231491365850515,
+							"parameters": {
+								"variable": "isMuted",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 236097845696377,
+							"disabled": true,
+							"parameters": {
+								"tag": "\"Music\"",
+								"db": "0"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "MuteIcon",
+							"sid": 176653724117999,
+							"parameters": {
+								"animation": "\"UnMute\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-muted",
+							"objectClass": "Audio",
+							"sid": 884368342772142,
+							"parameters": {
+								"tag": "\"Music\"",
+								"state": "unmuted"
+							}
+						}
+					],
+					"sid": 316080963924163
+				}
+			]
+		}
+	],
+	"sid": 568117006524206
+}

@@ -1,0 +1,77 @@
+{
+	"name": "Cloud",
+	"plugin-id": "Sprite",
+	"sid": 959037262980683,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Sin",
+			"name": "Sine",
+			"sid": 194181518799258
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 134,
+						"height": 82,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1281781,
+						"collisionPoly": {
+							"points": [
+								0.35074626865671643,
+								0,
+								0.43283582089552236,
+								0,
+								0.6194029850746269,
+								0.024390243902439025,
+								0.8283582089552238,
+								0.2804878048780488,
+								1,
+								0.6219512195121951,
+								1,
+								0.7073170731707317,
+								0.9776119402985075,
+								0.8292682926829268,
+								0.9253731343283582,
+								0.9146341463414634,
+								0.7985074626865671,
+								0.9634146341463414,
+								0.26865671641791045,
+								1,
+								0.03731343283582089,
+								0.8170731707317073,
+								0,
+								0.5121951219512195,
+								0,
+								0.4268292682926829,
+								0.11940298507462686,
+								0.23170731707317074
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 465428994491493,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

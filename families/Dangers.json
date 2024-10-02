@@ -1,0 +1,15 @@
+{
+	"name": "Dangers",
+	"plugin-id": "Sprite",
+	"sid": 574097770572567,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"toxicbin",
+		"cactus",
+		"EnemyWeapon",
+		"Lava",
+		"Lava2"
+	]
+}

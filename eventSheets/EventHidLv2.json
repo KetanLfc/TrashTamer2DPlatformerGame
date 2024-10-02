@@ -1,0 +1,175 @@
+{
+	"name": "EventHidLv2",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Level2"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 731919740431860
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Ouch",
+					"sid": 353317965101299,
+					"parameters": {
+						"x": "SashaShadow.X",
+						"y": "SashaShadow.Y "
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Ouch",
+					"sid": 418326601600225,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Ouch",
+					"sid": 769897072152851,
+					"parameters": {
+						"text": "\"Wooooooo!\""
+					}
+				}
+			],
+			"sid": 411276798219809,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [],
+					"sid": 512114442119657
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "SashaShadow",
+					"sid": 407854094109619,
+					"parameters": {
+						"object": "pipehole"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 172326625687887,
+					"parameters": {
+						"layout": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 885510798005686,
+					"parameters": {
+						"variable": "hiddenLevel2",
+						"value": "1"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 445100765853578,
+					"parameters": {
+						"audio-file": "game-bonus-144751",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 124430867597858
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "SashaShadow",
+					"sid": 848012904896065,
+					"parameters": {
+						"object": "Coin"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 888219056874843,
+					"parameters": {
+						"variable": "Score",
+						"value": "Score"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "ScoreTxt",
+					"sid": 612777007013182,
+					"parameters": {
+						"text": "\"Score \" & Score"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Coin",
+					"sid": 515340789061129
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 961426688006811,
+					"parameters": {
+						"audio-file": "Retro Game Coin Sound Effect",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 576815289693397
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 153237120122506,
+					"parameters": {
+						"object": "RestartBtn"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 235185043158966,
+					"parameters": {
+						"layout": "1"
+					}
+				}
+			],
+			"sid": 272665224904179
+		}
+	],
+	"sid": 552896551942856
+}

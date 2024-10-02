@@ -1,0 +1,79 @@
+{
+	"name": "FinalMonster2",
+	"plugin-id": "Sprite",
+	"sid": 257367599026739,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "direction2",
+			"type": "string",
+			"desc": "Right | Left",
+			"show": true,
+			"sid": 240382730653466
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Platform",
+			"name": "Platform",
+			"sid": 995945121112621
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 631,
+						"height": 495,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 845514,
+						"collisionPoly": {
+							"points": [
+								0.44690966719492864,
+								0.012121212121212088,
+								0.497622820919176,
+								0.012121212121212088,
+								0.6513470681458003,
+								0.06666666666666665,
+								0.9445324881141046,
+								0.6606060606060606,
+								0.8589540412044374,
+								0.8141414141414142,
+								0.6370839936608558,
+								0.9636363636363636,
+								0.3961965134706815,
+								1,
+								0.031695721077654504,
+								0.898989898989899,
+								0.023771790808240878,
+								0.6161616161616161,
+								0.06973058637083995,
+								0.31919191919191925,
+								0.11568938193343903,
+								0.23838383838383836
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 248690718003708,
+				"name": "Idle",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

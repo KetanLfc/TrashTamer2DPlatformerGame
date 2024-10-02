@@ -1,0 +1,61 @@
+{
+	"name": "fireslash",
+	"plugin-id": "Sprite",
+	"sid": 344461142369321,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 775966956487768
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 365,
+						"height": 210,
+						"originX": 0.536986301369863,
+						"originY": 0.8047619047619048,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9957952,
+						"collisionPoly": {
+							"points": [
+								0.7342465753424657,
+								0.04761904761904816,
+								0.93972602739726,
+								0.47619047619047616,
+								0.6383561643835617,
+								0.8904761904761904,
+								0.4410958904109589,
+								0.9523809523809523,
+								0.043835616438356165,
+								0.26666666666666666,
+								0.23835616438356164,
+								0.09047619047619102
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 445837367819558,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,57 @@
+{
+	"name": "CreditBgd",
+	"plugin-id": "Sprite",
+	"sid": 560885669125267,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 396,
+						"height": 550,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 983457,
+						"collisionPoly": {
+							"points": [
+								0.42676767676767674,
+								0,
+								0.9772727272727273,
+								0.06363636363636363,
+								0.9974747474747475,
+								0.17272727272727273,
+								0.946969696969697,
+								0.990909090909091,
+								0.007575757575757576,
+								0.9636363636363636,
+								0.007575757575757576,
+								0.11636363636363636,
+								0.027777777777777776,
+								0.06181818181818182
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 658794660735541,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

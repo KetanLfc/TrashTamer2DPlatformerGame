@@ -1,0 +1,15 @@
+{
+	"name": "FailedToTxt3",
+	"plugin-id": "Text",
+	"sid": 771624018759860,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 683282756577527
+		}
+	],
+	"effectTypes": []
+}

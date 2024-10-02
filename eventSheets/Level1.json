@@ -1,0 +1,493 @@
+{
+	"name": "Level1",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Level2"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "MenuSheet"
+		},
+		{
+			"eventType": "variable",
+			"name": "hiddenLevel2",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 846524328916278
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 683242857854121
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "InfoTextLvl2",
+					"sid": 239779922773458,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "TextWindow",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "InfoTextLvl2",
+					"sid": 417471781137773,
+					"behaviorType": "Fade"
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "TextWindow",
+					"sid": 876602989505202,
+					"behaviorType": "Fade"
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "DirectionTxt",
+					"sid": 837798947396243,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Cloud",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "DownDirection",
+					"sid": 792538505346539,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Cloud",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				}
+			],
+			"sid": 442909487748745,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 119045700889385,
+							"parameters": {
+								"variable": "hiddenLevel2",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "SashaShadow",
+							"sid": 888697430103414,
+							"parameters": {
+								"x": "4734",
+								"y": "973"
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "Sasha",
+							"sid": 181711084110151,
+							"parameters": {
+								"x": "4734",
+								"y": "973"
+							}
+						}
+					],
+					"sid": 877886808657834
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 954997021375466,
+					"parameters": {
+						"key": 40
+					}
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "SashaShadow",
+					"sid": 535960448202491,
+					"parameters": {
+						"object": "hole2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-ignoring-input",
+					"objectClass": "SashaShadow",
+					"sid": 460393225963773,
+					"behaviorType": "Platform",
+					"parameters": {
+						"input": "start-ignoring"
+					}
+				},
+				{
+					"id": "move-to-bottom",
+					"objectClass": "Sasha",
+					"sid": 934783643160940
+				},
+				{
+					"id": "unpin",
+					"objectClass": "Sasha",
+					"sid": 204755019118380,
+					"behaviorType": "Pin"
+				},
+				{
+					"id": "start",
+					"objectClass": "Sasha",
+					"sid": 454258010011934,
+					"behaviorType": "LiteTween",
+					"parameters": {
+						"start-mode": "resume-at-current-progress",
+						"force-use-current": "start-from-current"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 764896568235061,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 822405858416044,
+					"parameters": {
+						"layout": "HiddenLevel2"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 278627608895029,
+					"parameters": {
+						"audio-file": "game-bonus-144751",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 285813103795847
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "SashaShadow",
+					"sid": 452372453169265,
+					"parameters": {
+						"object": "Coin"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 766130312579435,
+					"parameters": {
+						"variable": "Score",
+						"value": "Score"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "ScoreTxt",
+					"sid": 648657766501495,
+					"parameters": {
+						"text": "\"Score \" & Score"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Coin",
+					"sid": 155863504814571
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 404243016552538,
+					"parameters": {
+						"audio-file": "Retro Game Coin Sound Effect",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 397959375157783
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-android",
+					"objectClass": "PlatformInfo",
+					"sid": 658387178921116
+				}
+			],
+			"actions": [],
+			"sid": 524238397215035,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 921530190217643,
+							"parameters": {
+								"object": "downshadow"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "SashaShadow",
+							"sid": 661069389263232,
+							"parameters": {
+								"object": "hole2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-ignoring-input",
+							"objectClass": "SashaShadow",
+							"sid": 989946699470014,
+							"behaviorType": "Platform",
+							"parameters": {
+								"input": "start-ignoring"
+							}
+						},
+						{
+							"id": "move-to-bottom",
+							"objectClass": "Sasha",
+							"sid": 485104666016581
+						},
+						{
+							"id": "unpin",
+							"objectClass": "Sasha",
+							"sid": 200288210122076,
+							"behaviorType": "Pin"
+						},
+						{
+							"id": "start",
+							"objectClass": "Sasha",
+							"sid": 100940723253455,
+							"behaviorType": "LiteTween",
+							"parameters": {
+								"start-mode": "resume-at-current-progress",
+								"force-use-current": "start-from-current"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 134968031459217,
+							"parameters": {
+								"seconds": "1.0"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 323335625767090,
+							"parameters": {
+								"layout": "HiddenLevel2"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 569804524868574,
+							"parameters": {
+								"audio-file": "game-bonus-144751",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 307217637082913
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-ios",
+					"objectClass": "PlatformInfo",
+					"sid": 653621708695893
+				}
+			],
+			"actions": [],
+			"sid": 249222012539436,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-touching-object",
+							"objectClass": "Touch",
+							"sid": 351263979993475,
+							"parameters": {
+								"object": "downshadow"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "SashaShadow",
+							"sid": 495671864430782,
+							"parameters": {
+								"object": "hole2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-ignoring-input",
+							"objectClass": "SashaShadow",
+							"sid": 758636218185388,
+							"behaviorType": "Platform",
+							"parameters": {
+								"input": "start-ignoring"
+							}
+						},
+						{
+							"id": "move-to-bottom",
+							"objectClass": "Sasha",
+							"sid": 310949195747555
+						},
+						{
+							"id": "unpin",
+							"objectClass": "Sasha",
+							"sid": 586204536060128,
+							"behaviorType": "Pin"
+						},
+						{
+							"id": "start",
+							"objectClass": "Sasha",
+							"sid": 778214425271010,
+							"behaviorType": "LiteTween",
+							"parameters": {
+								"start-mode": "resume-at-current-progress",
+								"force-use-current": "start-from-current"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 563455178967347,
+							"parameters": {
+								"seconds": "1.0"
+							}
+						},
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 898014207155273,
+							"parameters": {
+								"layout": "HiddenLevel2"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 490082880148736,
+							"parameters": {
+								"audio-file": "game-bonus-144751",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 924446456949944
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "SashaShadow",
+					"sid": 976152138559124,
+					"parameters": {
+						"object": "Flag2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 131147978169193,
+					"parameters": {
+						"layout": "LevelComplete1"
+					}
+				},
+				{
+					"id": "log-in",
+					"objectClass": "Facebook",
+					"sid": 465913392393426,
+					"parameters": {
+						"permissions": "\"\""
+					}
+				},
+				{
+					"id": "prompt-wall-post",
+					"objectClass": "Facebook",
+					"sid": 695244288100651
+				}
+			],
+			"sid": 771661216896806
+		}
+	],
+	"sid": 973413816481398
+}

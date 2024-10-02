@@ -1,0 +1,57 @@
+{
+	"name": "PipeHidden3",
+	"plugin-id": "Sprite",
+	"sid": 669245244550354,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 33,
+						"height": 33,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8211157,
+						"collisionPoly": {
+							"points": [
+								0,
+								0.9696969696969697,
+								0,
+								0,
+								0.4545454545454546,
+								0,
+								0.9696969696969697,
+								0.06060606060606055,
+								1,
+								0.7878787878787878,
+								0.9696969696969697,
+								0.9090909090909091,
+								0.4545454545454546,
+								0.9696969696969697
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 376241358439107,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

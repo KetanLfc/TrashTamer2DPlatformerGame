@@ -1,0 +1,15 @@
+{
+	"name": "TrashTotalLC1",
+	"plugin-id": "Text",
+	"sid": 438002676942115,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 130442016568513
+		}
+	],
+	"effectTypes": []
+}

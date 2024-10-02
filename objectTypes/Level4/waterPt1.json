@@ -1,0 +1,74 @@
+{
+	"name": "waterPt1",
+	"plugin-id": "Sprite",
+	"sid": 605408481997882,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 597353707532967
+		},
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 744941081298187
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 151,
+						"height": 224,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4656786,
+						"collisionPoly": {
+							"points": [
+								0.5629138392471924,
+								0.3973214330998354,
+								0.20529801324503308,
+								0.6830357228006636,
+								0.49337778410087746,
+								0.5781249929945199,
+								0.4701986966830726,
+								0.8839285842009958,
+								0.10596059331830761,
+								0.6874999489103046,
+								0.0331125827814569,
+								0.5803571428571429,
+								0.09933774834437081,
+								0.3571428571428572,
+								0.2781455185239679,
+								0.17410719394683843,
+								0.2847687677042373,
+								0.2433035927159447,
+								0.543046448677154,
+								0.1718750392074722
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 980234167130433,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

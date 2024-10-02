@@ -1,0 +1,20 @@
+{
+	"name": "GameDesc",
+	"plugin-id": "Text",
+	"sid": 891517034114617,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "DragnDrop",
+			"name": "DragDrop",
+			"sid": 282511434980283
+		},
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 670599572604731
+		}
+	],
+	"effectTypes": []
+}

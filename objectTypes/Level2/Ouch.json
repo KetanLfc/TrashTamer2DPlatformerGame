@@ -1,0 +1,15 @@
+{
+	"name": "Ouch",
+	"plugin-id": "Text",
+	"sid": 239002194585488,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 503856209637545
+		}
+	],
+	"effectTypes": []
+}

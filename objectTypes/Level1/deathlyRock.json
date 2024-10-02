@@ -1,0 +1,57 @@
+{
+	"name": "deathlyRock",
+	"plugin-id": "Sprite",
+	"sid": 566240450753874,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 504892020557739
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 92,
+						"height": 84,
+						"originX": 0,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4175012,
+						"collisionPoly": {
+							"points": [
+								0.4937888194592844,
+								0.00510204053756331,
+								0.9891304347826086,
+								1,
+								0.03260869565217391,
+								0.9880952380952381,
+								0.3804347826086957,
+								0.14285714285714285
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 489778343179797,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

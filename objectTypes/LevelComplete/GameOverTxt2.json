@@ -1,0 +1,15 @@
+{
+	"name": "GameOverTxt2",
+	"plugin-id": "Text",
+	"sid": 492173166630924,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 883860153488278
+		}
+	],
+	"effectTypes": []
+}

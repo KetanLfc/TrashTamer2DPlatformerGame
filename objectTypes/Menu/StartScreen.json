@@ -1,0 +1,57 @@
+{
+	"name": "StartScreen",
+	"plugin-id": "Sprite",
+	"sid": 479156663173514,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 980202065565975
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 362,
+						"height": 160,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6019645,
+						"collisionPoly": {
+							"points": [
+								0.0027624309392265192,
+								0.005494505494505495,
+								0.9972375690607734,
+								0.005494505494505495,
+								0.9972375690607734,
+								0.9945054945054945,
+								0.0027624309392265192,
+								0.9945054945054945
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 452187379231034,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

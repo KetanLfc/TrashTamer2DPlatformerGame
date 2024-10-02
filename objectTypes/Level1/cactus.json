@@ -1,0 +1,59 @@
+{
+	"name": "cactus",
+	"plugin-id": "Sprite",
+	"sid": 970738223630357,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 230,
+						"height": 195,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4778104,
+						"collisionPoly": {
+							"points": [
+								0.5304347826086957,
+								0,
+								0.691304347826087,
+								0.14871794871794872,
+								0.8478260869565217,
+								0.3230769230769231,
+								0.8487256319232095,
+								0.6611847809638303,
+								0.8652173913043478,
+								0.9743589743589743,
+								0.36086956521739133,
+								1,
+								0.47901051296157626,
+								0.7071617934917468,
+								0.3347826086956522,
+								0.07692307692307693
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 322176128757476,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

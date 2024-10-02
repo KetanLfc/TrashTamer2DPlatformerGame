@@ -1,0 +1,21 @@
+{
+	"name": "Trashes",
+	"plugin-id": "Sprite",
+	"sid": 374464783134327,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"can",
+		"Thrash",
+		"deadfish",
+		"deadorangefish",
+		"Trashes1",
+		"Trashes2",
+		"Trashes3",
+		"Trashes4",
+		"Trashes5",
+		"Trashes6",
+		"Trashes7"
+	]
+}

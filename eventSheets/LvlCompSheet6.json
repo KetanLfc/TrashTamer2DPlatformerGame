@@ -1,0 +1,103 @@
+{
+	"name": "LvlCompSheet6",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 131768204023367
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "LvlCompleteTxtLC1",
+					"sid": 647728941495226,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Window2LC1",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "TrashCollectedTxtLC1",
+					"sid": 930889851348493,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Window2LC1",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "MenuTxt3",
+					"sid": 689873384920547,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "MainMenuBtn3",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "MainMenuBtn3",
+					"sid": 601688075957933,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Window2LC1",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				}
+			],
+			"sid": 324643870046272
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 679742672450282,
+					"parameters": {
+						"object": "MainMenuBtn3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 980887814916614,
+					"parameters": {
+						"layout": "Menu"
+					}
+				}
+			],
+			"sid": 522927073692970
+		}
+	],
+	"sid": 240728966862861
+}

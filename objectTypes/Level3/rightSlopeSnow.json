@@ -1,0 +1,55 @@
+{
+	"name": "rightSlopeSnow",
+	"plugin-id": "Sprite",
+	"sid": 998560002994120,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 837887840049036
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 48,
+						"height": 48,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5610165,
+						"collisionPoly": {
+							"points": [
+								0.9861111111111112,
+								0.013888888888888888,
+								0.9861111111111112,
+								0.9861111111111112,
+								0.013888888888888888,
+								0.9722222222222222
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 474637253622830,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

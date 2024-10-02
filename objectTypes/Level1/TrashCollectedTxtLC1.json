@@ -1,0 +1,15 @@
+{
+	"name": "TrashCollectedTxtLC1",
+	"plugin-id": "Text",
+	"sid": 995333585812274,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 105816345567114
+		}
+	],
+	"effectTypes": []
+}

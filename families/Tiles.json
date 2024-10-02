@@ -1,0 +1,22 @@
+{
+	"name": "Tiles",
+	"plugin-id": "Sprite",
+	"sid": 721025901527045,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Tile1",
+		"tile4",
+		"bottomSnowBlock",
+		"rightSnowBlock",
+		"rightCornerSnowBlock",
+		"bottomleft",
+		"bottom",
+		"bottomright",
+		"leftblock",
+		"rightblock",
+		"Sprite6",
+		"Sprite5"
+	]
+}

@@ -1,0 +1,111 @@
+{
+	"name": "BonusBox",
+	"plugin-id": "Sprite",
+	"sid": 964901739157448,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 696198573652155
+		},
+		{
+			"behaviorId": "lunarray_LiteTween",
+			"name": "LiteTween",
+			"sid": 804089961828910
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 239,
+						"height": 327,
+						"originX": 0,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3998951,
+						"collisionPoly": {
+							"points": [
+								0.5062761506276151,
+								0.021406727828746176,
+								0.6861924686192469,
+								0.12844036697247707,
+								0.9832635983263598,
+								0.40672782874617736,
+								0.9623430962343096,
+								0.8379204892966361,
+								0.4895397489539749,
+								0.9969418960244648,
+								0.016736401673640166,
+								0.8287461773700305,
+								0.008368200836820083,
+								0.39755351681957185,
+								0.30962343096234307,
+								0.10091743119266056
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 0.5062761506276151,
+								"y": -0.03363914373088685
+							}
+						],
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 227,
+						"height": 278,
+						"originX": 0,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 1033183,
+						"collisionPoly": {
+							"points": [
+								0.31277533039647576,
+								0,
+								0.7312775330396476,
+								0.01079136690647482,
+								1,
+								0.2733812949640288,
+								0.9955947136563876,
+								0.8309352517985612,
+								0.5506607929515418,
+								1,
+								0.5022026431718062,
+								1,
+								0.02643171806167401,
+								0.8129496402877698,
+								0.00881057268722467,
+								0.29856115107913667
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 999919973695169,
+				"name": "BonusBox",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,112 @@
+{
+	"name": "GameplayDescSheet",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 119848963613839
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "GameDesc",
+					"sid": 759060985181104,
+					"disabled": true,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "Window3",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "set-axes",
+					"objectClass": "GameDesc",
+					"sid": 562466192657679,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"axes": "vertical-only"
+					}
+				}
+			],
+			"sid": 146405222201533
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-outside-layout",
+					"objectClass": "GameDesc",
+					"sid": 336040746504772
+				}
+			],
+			"actions": [
+				{
+					"id": "set-y",
+					"objectClass": "GameDesc",
+					"sid": 158796564441460,
+					"parameters": {
+						"y": "clamp(GameDesc.Y, Window3.Y - (GameDesc.Height - Window3.Height), Window3.Y)"
+					}
+				}
+			],
+			"sid": 472261489837639
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-dragging",
+					"objectClass": "GameDesc",
+					"sid": 311731979133507,
+					"behaviorType": "DragDrop"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-axes",
+					"objectClass": "GameDesc",
+					"sid": 480955248860788,
+					"behaviorType": "DragDrop",
+					"parameters": {
+						"axes": "vertical-only"
+					}
+				}
+			],
+			"sid": 976249940367159
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 149763400460438,
+					"parameters": {
+						"object": "NextBtnGamePlayShadow"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 226878671843587,
+					"parameters": {
+						"layout": "1"
+					}
+				}
+			],
+			"sid": 193368606185939
+		}
+	],
+	"sid": 761484365469232
+}

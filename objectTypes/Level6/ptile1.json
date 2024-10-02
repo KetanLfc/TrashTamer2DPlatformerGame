@@ -1,0 +1,59 @@
+{
+	"name": "ptile1",
+	"plugin-id": "Sprite",
+	"sid": 349805353038690,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 388209079174737
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 146,
+						"height": 214,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 121944,
+						"collisionPoly": {
+							"points": [
+								0.3698630136986301,
+								0.03271028037383177,
+								0.9383561643835616,
+								0.037383177570093455,
+								0.9383561643835616,
+								0.6401869158878505,
+								0.0547945205479452,
+								0.6401869158878505,
+								0.1232876712328767,
+								0.037383177570093455
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 183838405452506,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,12 @@
+{
+	"name": "Monsters",
+	"plugin-id": "Sprite",
+	"sid": 322591821216685,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Enemy",
+		"SnowyEnemy"
+	]
+}

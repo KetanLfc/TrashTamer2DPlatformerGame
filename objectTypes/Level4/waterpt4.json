@@ -1,0 +1,57 @@
+{
+	"name": "waterpt4",
+	"plugin-id": "Sprite",
+	"sid": 558795585548708,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 131,
+						"height": 191,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 9791637,
+						"collisionPoly": {
+							"points": [
+								0.3053435114503817,
+								0.031413612565445025,
+								1,
+								0.612565445026178,
+								1,
+								0.680628272251309,
+								0.5114503816793893,
+								0.7486910994764397,
+								0.46564885496183206,
+								0.7486910994764397,
+								0,
+								0.7120418848167539,
+								0,
+								0.4083769633507853
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 879597368051076,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

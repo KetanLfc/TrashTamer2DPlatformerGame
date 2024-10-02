@@ -1,0 +1,65 @@
+{
+	"name": "Pipe2",
+	"plugin-id": "Sprite",
+	"sid": 841631528774426,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "PipeID",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 466943419035911
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 131202100075877
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 33,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5453447,
+						"collisionPoly": {
+							"points": [
+								0.007692307692307665,
+								0.00877192982456143,
+								0.9923076923076923,
+								0.00877192982456143,
+								0.9923076923076923,
+								0.9912280701754386,
+								0.0692307692307692,
+								0.9824561403508771
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 924121369469973,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

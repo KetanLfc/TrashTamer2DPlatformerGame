@@ -1,0 +1,61 @@
+{
+	"name": "BadBoy",
+	"plugin-id": "Sprite",
+	"sid": 942800775825783,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 115,
+						"height": 115,
+						"originX": 0.8173913043478261,
+						"originY": 0.591304347826087,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 2876820,
+						"collisionPoly": {
+							"points": [
+								0.5045871559633027,
+								0.23972602739726026,
+								0.7247706422018348,
+								0.2534246575342466,
+								0.8990825688073395,
+								0.4041095890410959,
+								0.8990825688073395,
+								0.4452054794520548,
+								0.7064220183486238,
+								0.8767123287671232,
+								0.3577981651376147,
+								0.8767123287671232,
+								0.1834862385321101,
+								0.4589041095890411,
+								0.1834862385321101,
+								0.4041095890410959,
+								0.3577981651376147,
+								0.2534246575342466
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 897949567071952,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

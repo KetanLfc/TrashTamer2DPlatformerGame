@@ -1,0 +1,51 @@
+{
+	"name": "HorizontalSpike",
+	"plugin-id": "Sprite",
+	"sid": 428413438748808,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 92,
+						"height": 84,
+						"originX": 0,
+						"originY": 1,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 939366,
+						"collisionPoly": {
+							"points": [
+								0.05,
+								0.05,
+								0.946,
+								0.05,
+								0.946,
+								0.948,
+								0.056,
+								0.948
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 213023776623772,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

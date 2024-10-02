@@ -1,0 +1,59 @@
+{
+	"name": "ControlButton",
+	"plugin-id": "Sprite",
+	"sid": 698596834117892,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 196,
+						"height": 70,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 3354074,
+						"collisionPoly": {
+							"points": [
+								0.015306122448979591,
+								0,
+								0.9846938775510204,
+								0,
+								1,
+								0.04285714285714286,
+								1,
+								0.9571428571428572,
+								0.9846938775510204,
+								1,
+								0.015306122448979591,
+								1,
+								0,
+								0.9571428571428572,
+								0,
+								0.04285714285714286
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 211702377866522,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

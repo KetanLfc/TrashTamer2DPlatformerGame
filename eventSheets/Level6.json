@@ -1,0 +1,4110 @@
+{
+	"name": "Level6",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Score6",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "Increment when a coin is collected",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 351648718428727
+		},
+		{
+			"eventType": "variable",
+			"name": "Trashes6",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 774423701389437
+		},
+		{
+			"eventType": "variable",
+			"name": "state",
+			"type": "string",
+			"initialValue": "Idle",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 249922432993913
+		},
+		{
+			"eventType": "variable",
+			"name": "IsMuted2",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 901024172843590
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "System",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "FinalMonster",
+							"sid": 439954125207344,
+							"parameters": {
+								"object": "SashaShadow"
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "Hero_Health_Func",
+							"sid": 926493891628284
+						},
+						{
+							"id": "flash",
+							"objectClass": "Sasha",
+							"sid": 204699762389126,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.1",
+								"off-time": "0.1",
+								"duration": "3.0"
+							}
+						}
+					],
+					"sid": 865317873474126
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 360860022714498
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 798880761838309,
+							"disabled": true,
+							"parameters": {
+								"audio-file": "Kirby's Return to Dream Land Title Theme 8 Bit Remix",
+								"loop": "looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "Sasha",
+							"sid": 185235238451616,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "SashaShadow",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 596460920271880,
+							"parameters": {
+								"layer": "\"BossHealth\"",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "EquipmentBox",
+							"sid": 367457647710363,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "Sasha",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "BadBoy2",
+							"sid": 306998180667340,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Castle",
+							"sid": 787661494676171,
+							"parameters": {
+								"animation": "\"BarDown\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "Lvl6Txt",
+							"sid": 657508290264647,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "TextWindow2",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "Lvl6Txt",
+							"sid": 667687178105447,
+							"behaviorType": "Fade"
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "TextWindow2",
+							"sid": 737936243566679,
+							"behaviorType": "Fade"
+						}
+					],
+					"sid": 360689144652734
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 331077028193146
+						}
+					],
+					"actions": [
+						{
+							"id": "set-width",
+							"objectClass": "BhealthF",
+							"sid": 901517712378503,
+							"parameters": {
+								"width": "FinalMonster.health"
+							}
+						},
+						{
+							"id": "set-width",
+							"objectClass": "BossLife",
+							"sid": 854204463667422,
+							"parameters": {
+								"width": "FinalMonster.health"
+							}
+						}
+					],
+					"sid": 263921584201478
+				},
+				{
+					"eventType": "comment",
+					"text": "Go to win/death layout"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-los-to-object",
+							"objectClass": "FinalMonster",
+							"sid": 698846236693380,
+							"behaviorType": "LineOfSight",
+							"parameters": {
+								"object": "SashaShadow",
+								"image-point": "0"
+							}
+						},
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 448249037408092,
+							"parameters": {
+								"interval-seconds": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle-toward-position",
+							"objectClass": "Bossprojectile",
+							"sid": 120818982053113,
+							"parameters": {
+								"x": "SashaShadow.X",
+								"y": "SashaShadow.Y"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "Bossprojectile",
+							"sid": 641631166555996,
+							"parameters": {
+								"angle": "clamp(EnemyWeapon.Angle,90,270)"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "FinalMonster",
+							"sid": 490589578860834,
+							"parameters": {
+								"object": "Bossprojectile",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-angle-toward-position",
+							"objectClass": "Bossprojectile",
+							"sid": 246236781326966,
+							"parameters": {
+								"x": "SashaShadow.X",
+								"y": "SashaShadow.Y"
+							}
+						}
+					],
+					"sid": 154497076301039
+				}
+			],
+			"sid": 260308526912553
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Hero Controls2",
+			"description": "Animation Controls",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 619915797083757,
+							"parameters": {
+								"key": 39
+							}
+						},
+						{
+							"id": "is-on-floor",
+							"objectClass": "SashaShadow",
+							"sid": 827093054205602,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Sasha",
+							"sid": 175278844080274,
+							"parameters": {
+								"animation": "\"Run\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "Sasha",
+							"sid": 313443787642700,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Sasha",
+							"sid": 178991811242397,
+							"parameters": {
+								"instance-variable": "direction",
+								"value": "\"Right\""
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "EquipmentBox",
+							"sid": 873495050439559,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 605814490291667
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 603475095570337,
+							"parameters": {
+								"key": 37
+							}
+						},
+						{
+							"id": "is-on-floor",
+							"objectClass": "SashaShadow",
+							"sid": 249789747604848,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Sasha",
+							"sid": 948016978471670,
+							"parameters": {
+								"animation": "\"Run\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "Sasha",
+							"sid": 605262220651636,
+							"parameters": {
+								"state": "mirrored"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Sasha",
+							"sid": 406203369072141,
+							"parameters": {
+								"instance-variable": "direction",
+								"value": "\"Left\""
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "EquipmentBox",
+							"sid": 587157955613829,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 785475156512597
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "SashaShadow",
+							"sid": 868832250397897,
+							"behaviorType": "Platform",
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Sasha",
+							"sid": 860837948669712,
+							"parameters": {
+								"animation": "\"Idle\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 523144298339541
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 184903793156428,
+							"parameters": {
+								"key": 32
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-max-speed",
+							"objectClass": "SashaShadow",
+							"sid": 422042571605946,
+							"behaviorType": "Platform",
+							"parameters": {
+								"max-speed": "750"
+							}
+						}
+					],
+					"sid": 941671143051176
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 113343027095648
+						}
+					],
+					"actions": [
+						{
+							"id": "set-max-speed",
+							"objectClass": "SashaShadow",
+							"sid": 562338825521395,
+							"behaviorType": "Platform",
+							"parameters": {
+								"max-speed": "330"
+							}
+						}
+					],
+					"sid": 807823619864976
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 865141650193127
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Health",
+							"sid": 357242711996155,
+							"parameters": {
+								"frame-number": "Sasha.Health"
+							}
+						}
+					],
+					"sid": 917631173385161,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 123034939261777,
+									"parameters": {
+										"first-value": "SashaShadow.Platform.MaxSpeed",
+										"comparison": 4,
+										"second-value": "330"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-jump-strength",
+									"objectClass": "SashaShadow",
+									"sid": 221477595758335,
+									"behaviorType": "Platform",
+									"parameters": {
+										"jump-strength": "1200"
+									}
+								}
+							],
+							"sid": 792836339096945
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 761848397731644
+								}
+							],
+							"actions": [
+								{
+									"id": "set-jump-strength",
+									"objectClass": "SashaShadow",
+									"sid": 203044985564654,
+									"behaviorType": "Platform",
+									"parameters": {
+										"jump-strength": "650"
+									}
+								}
+							],
+							"sid": 696137230593561
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 279416873055270,
+							"parameters": {
+								"key": 40
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Sasha",
+							"sid": 184831759462254,
+							"parameters": {
+								"animation": "\"Slide\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 734883586007432
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 698361097609383,
+							"parameters": {
+								"key": 68
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Sasha",
+							"sid": 571671766294007,
+							"parameters": {
+								"animation": "\"Walk\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 839566900302776
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 267416314676034,
+							"parameters": {
+								"key": 67
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Sasha",
+							"sid": 433579462800477,
+							"parameters": {
+								"animation": "\"Climb\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 234362532734068
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 616463390619124,
+							"parameters": {
+								"key": 38
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Sasha",
+							"sid": 532672240140963,
+							"parameters": {
+								"animation": "\"Jump\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 912321470896149
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 430030684347052
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Sasha",
+							"sid": 562538729130356,
+							"parameters": {
+								"animation": "\"Attack\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 994828401564746
+				}
+			],
+			"sid": 260930817675320
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Hero Health2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Sasha",
+							"sid": 376514823709619,
+							"parameters": {
+								"instance-variable": "Health",
+								"comparison": 5,
+								"value": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Sasha",
+							"sid": 411595800929429
+						},
+						{
+							"id": "destroy",
+							"objectClass": "SashaShadow",
+							"sid": 569957055243818
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 342223124330626,
+							"parameters": {
+								"audio-file": "game over - sound effect",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 917316489860288,
+							"parameters": {
+								"seconds": "0.2"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 103632706925886,
+							"parameters": {
+								"layer": "\"PopUp6\"",
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 440195447367558
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Sasha",
+							"sid": 583158495975524,
+							"parameters": {
+								"object": "Heart"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Sasha",
+							"sid": 233466254682056,
+							"parameters": {
+								"instance-variable": "Health",
+								"value": "-1"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 914476373802335,
+							"parameters": {
+								"audio-file": "Retro Game Coin Sound Effect",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Heart",
+							"sid": 983538228831375
+						}
+					],
+					"sid": 730443553866728
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Sasha",
+							"sid": 511278306335640,
+							"parameters": {
+								"instance-variable": "Health",
+								"comparison": 2,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Sasha",
+							"sid": 164240228716884,
+							"parameters": {
+								"instance-variable": "Health",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 757054186557977
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "SashaShadow",
+							"sid": 529126948177675,
+							"parameters": {
+								"object": "Lava2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Sasha",
+							"sid": 679376371490894,
+							"parameters": {
+								"instance-variable": "Health",
+								"value": "5"
+							}
+						}
+					],
+					"sid": 634131954407611
+				},
+				{
+					"functionName": "Hero_Health_Func2",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 809552348020753,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "trigger-once-while-true",
+									"objectClass": "System",
+									"sid": 764027107459781
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-instvar",
+									"objectClass": "Sasha",
+									"sid": 906367893183096,
+									"parameters": {
+										"instance-variable": "Health",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 252055614126566
+						}
+					]
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "HeroHealth2",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Sasha",
+									"sid": 261052321403266,
+									"parameters": {
+										"object": "orbs2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "Hero_Health_Func2",
+									"sid": 179607202488374
+								},
+								{
+									"id": "flash",
+									"objectClass": "Sasha",
+									"sid": 446603991576119,
+									"behaviorType": "Flash",
+									"parameters": {
+										"on-time": "0.1",
+										"off-time": "0.1",
+										"duration": "3.0"
+									}
+								}
+							],
+							"sid": 302365007709728
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Sasha",
+									"sid": 259247271524791,
+									"parameters": {
+										"object": "Bossprojectile"
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "Hero_Health_Func2",
+									"sid": 743823670716638
+								},
+								{
+									"id": "flash",
+									"objectClass": "Sasha",
+									"sid": 473796795108880,
+									"behaviorType": "Flash",
+									"parameters": {
+										"on-time": "0.1",
+										"off-time": "0.1",
+										"duration": "3.0"
+									}
+								}
+							],
+							"sid": 953164756512406
+						}
+					],
+					"sid": 494057666533333
+				}
+			],
+			"sid": 566850940077418
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Sasha Powers",
+			"description": "",
+			"isActiveOnStart": false,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "SashaShadow",
+							"sid": 410266234629213,
+							"parameters": {
+								"object": "Boots"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-max-speed",
+							"objectClass": "SashaShadow",
+							"sid": 431985284461096,
+							"behaviorType": "Platform",
+							"parameters": {
+								"max-speed": "1300"
+							}
+						},
+						{
+							"id": "set-scale",
+							"objectClass": "Sasha",
+							"sid": 292260064810538,
+							"parameters": {
+								"scale": "5"
+							}
+						},
+						{
+							"id": "set-jump-strength",
+							"objectClass": "SashaShadow",
+							"sid": 754892656761144,
+							"behaviorType": "Platform",
+							"parameters": {
+								"jump-strength": "2000"
+							}
+						}
+					],
+					"sid": 131850290396401,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "SashaShadow",
+							"sid": 726101217619342,
+							"parameters": {
+								"object": "Boots"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Sasha",
+							"sid": 442458245199441,
+							"parameters": {
+								"animation": "\"Sword\"",
+								"from": "current-frame"
+							}
+						}
+					],
+					"sid": 117909420800885,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "SashaShadow",
+							"sid": 322254584473384,
+							"parameters": {
+								"object": "Gloves"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-max-speed",
+							"objectClass": "SashaShadow",
+							"sid": 267630696762949,
+							"behaviorType": "Platform",
+							"parameters": {
+								"max-speed": "850"
+							}
+						},
+						{
+							"id": "set-scale",
+							"objectClass": "Sasha",
+							"sid": 621817574836909,
+							"parameters": {
+								"scale": "1"
+							}
+						},
+						{
+							"id": "set-jump-strength",
+							"objectClass": "SashaShadow",
+							"sid": 596727381820136,
+							"behaviorType": "Platform",
+							"parameters": {
+								"jump-strength": "850"
+							}
+						}
+					],
+					"sid": 858342943097805,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 900047687426443,
+							"parameters": {
+								"key": 70
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Sasha",
+							"sid": 643664288508126,
+							"parameters": {
+								"object": "fireslash",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 887409956957375,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-mirrored",
+									"objectClass": "Sasha",
+									"sid": 394032615899675
+								}
+							],
+							"actions": [
+								{
+									"id": "set-angle",
+									"objectClass": "fireslash",
+									"sid": 217653007122276,
+									"parameters": {
+										"angle": "180"
+									}
+								}
+							],
+							"sid": 701508458657219
+						}
+					]
+				}
+			],
+			"sid": 666831995644174
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Coin Collection",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "SashaShadow",
+							"sid": 357403599120580,
+							"parameters": {
+								"object": "Coin3LC1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 943666081897988,
+							"parameters": {
+								"variable": "Score6",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "ScoreTxt",
+							"sid": 205309764458028,
+							"parameters": {
+								"text": "\"x \" & Score6"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Coin3LC1",
+							"sid": 782857097601495
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 627234672259962,
+							"parameters": {
+								"audio-file": "Retro Game Coin Sound Effect",
+								"loop": "not-looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 987418408983947
+				}
+			],
+			"sid": 520549199649945
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Bonus Box Collision2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "SashaShadow",
+							"sid": 171680318793009,
+							"parameters": {
+								"object": "PowerUpBoxtrigger"
+							}
+						},
+						{
+							"id": "pick-nearestfurthest",
+							"objectClass": "PowerUpBox",
+							"sid": 295550483169508,
+							"parameters": {
+								"which": "nearest",
+								"x": "SashaShadow.X",
+								"y": "SashaShadow.Y"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Sasha",
+							"sid": 154868273041596,
+							"parameters": {
+								"animation": "\"Collision\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "PowerUpBox",
+							"sid": 553666059415503,
+							"parameters": {
+								"object": "SwordpickUp",
+								"layer": "0",
+								"image-point": "1",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "SwordpickUp",
+							"sid": 727388460575150,
+							"behaviorType": "Fade"
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "PowerUpBox",
+							"sid": 883199740058084,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "start",
+							"objectClass": "PowerUpBox",
+							"sid": 717345766553989,
+							"behaviorType": "LiteTween",
+							"parameters": {
+								"start-mode": "ping-pong",
+								"force-use-current": "start-from-last-recorded"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 987518697001004,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "PowerUpBox",
+							"sid": 584632838927236,
+							"behaviorType": "LiteTween",
+							"parameters": {
+								"stop-mode": "stop-at-tween-start"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "PowerUpBoxtrigger",
+							"sid": 364448006629126
+						}
+					],
+					"sid": 242549005171453
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "SashaShadow",
+							"sid": 108057399924407,
+							"parameters": {
+								"object": "PowerUpBoxtrigger2"
+							}
+						},
+						{
+							"id": "pick-nearestfurthest",
+							"objectClass": "PowerUpBox2",
+							"sid": 964855923667520,
+							"parameters": {
+								"which": "nearest",
+								"x": "SashaShadow.X",
+								"y": "SashaShadow.Y"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Sasha",
+							"sid": 798603904710752,
+							"parameters": {
+								"animation": "\"Collision\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "PowerUpBox2",
+							"sid": 872555839757375,
+							"parameters": {
+								"object": "Gloves",
+								"layer": "0",
+								"image-point": "1",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "Gloves",
+							"sid": 188186194952106,
+							"behaviorType": "Fade"
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "PowerUpBox2",
+							"sid": 409960310030940,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "start",
+							"objectClass": "PowerUpBox2",
+							"sid": 862746146228533,
+							"behaviorType": "LiteTween",
+							"parameters": {
+								"start-mode": "ping-pong",
+								"force-use-current": "start-from-last-recorded"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 989529615968741,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "PowerUpBox2",
+							"sid": 514327727633730,
+							"behaviorType": "LiteTween",
+							"parameters": {
+								"stop-mode": "stop-at-tween-start"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "PowerUpBoxtrigger2",
+							"sid": 687976250650597
+						}
+					],
+					"sid": 425455589518098
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "SashaShadow",
+							"sid": 242736831061277,
+							"parameters": {
+								"object": "PowerUpBoxtrigger3"
+							}
+						},
+						{
+							"id": "pick-nearestfurthest",
+							"objectClass": "PowerUpBox3",
+							"sid": 210533924144770,
+							"parameters": {
+								"which": "nearest",
+								"x": "SashaShadow.X",
+								"y": "SashaShadow.Y"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "PowerUpBox3",
+							"sid": 721469008948284,
+							"parameters": {
+								"instance-variable": "nCoin",
+								"comparison": 4,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Sasha",
+							"sid": 397982431007245,
+							"parameters": {
+								"animation": "\"Collision\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "PowerUpBox3",
+							"sid": 132387100977552,
+							"parameters": {
+								"object": "Coin3LC1",
+								"layer": "0",
+								"image-point": "1",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "start-fade",
+							"objectClass": "Coin3LC1",
+							"sid": 206033386583033,
+							"behaviorType": "Fade"
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "PowerUpBox3",
+							"sid": 330511409896730,
+							"parameters": {
+								"frame-number": "1"
+							}
+						},
+						{
+							"id": "start",
+							"objectClass": "PowerUpBox3",
+							"sid": 395224724950514,
+							"behaviorType": "LiteTween",
+							"parameters": {
+								"start-mode": "ping-pong",
+								"force-use-current": "start-from-last-recorded"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 796996919307989,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "PowerUpBox3",
+							"sid": 564104575622187,
+							"behaviorType": "LiteTween",
+							"parameters": {
+								"stop-mode": "stop-at-tween-start"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "PowerUpBoxtrigger3",
+							"sid": 108124779052459
+						},
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "PowerUpBox3",
+							"sid": 302149738561027,
+							"parameters": {
+								"instance-variable": "nCoin",
+								"value": "1"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "PowerUpBox3",
+							"sid": 123535003336844,
+							"parameters": {
+								"object": "Coin3LC1",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 724063360646231
+				}
+			],
+			"sid": 213867850140704
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "PopUp2",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 612417642041024
+						}
+					],
+					"actions": [
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "GameOverTxt3",
+							"sid": 394307667290445,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "Window3",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "FailedToTxt3",
+							"sid": 446550291905244,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "Window3",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "RestartGO6",
+							"sid": 649599773913305,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "Window3",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "MenuTxt2",
+							"sid": 676000639691299,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "MainMenuBtn2",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "MainMenuBtn2",
+							"sid": 116778516932591,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "Window3",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						}
+					],
+					"sid": 791653486458653
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 100062244621582
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 117041952688041,
+							"parameters": {
+								"layer": "\"PopUp6\"",
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 573057473735586
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 717140436045606,
+							"parameters": {
+								"layer": "\"PopUp6\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "SashaShadow",
+							"sid": 505337742683950,
+							"behaviorType": "Platform",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 852108804939397,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 853229086637820,
+									"parameters": {
+										"object": "RestartGO6"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 423502951044559,
+									"parameters": {
+										"seconds": "0.2"
+									}
+								},
+								{
+									"id": "restart-layout",
+									"objectClass": "System",
+									"sid": 228988547487635
+								}
+							],
+							"sid": 312649031935642
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 531289485090345,
+									"parameters": {
+										"object": "MainMenuBtn2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 389528957556700,
+									"parameters": {
+										"layout": "Menu"
+									}
+								}
+							],
+							"sid": 659701016510786
+						}
+					]
+				}
+			],
+			"sid": 386383896348645
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Trigger Boss",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "SashaShadow",
+							"sid": 381659888894239,
+							"parameters": {
+								"object": "obj_boss_trigger2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 428073910643113,
+							"parameters": {
+								"layer": "\"BossHealth\"",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "start-timer",
+							"objectClass": "SashaShadow",
+							"sid": 914892977944085,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "1.5",
+								"type": "once",
+								"tag": "\"Boss\""
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "obj_boss_trigger2",
+							"sid": 752360570561198
+						}
+					],
+					"sid": 164771240075378
+				}
+			],
+			"sid": 681228135233845
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Boss Commands",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "FinalMonster",
+							"sid": 395405348924341,
+							"parameters": {
+								"instance-variable": "direction2",
+								"comparison": 0,
+								"value": "\"Right\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "FinalMonster",
+							"sid": 152563652756276,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "right"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "FinalMonster",
+							"sid": 184849983238247,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 839717973126004
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "FinalMonster",
+							"sid": 920646548042937,
+							"parameters": {
+								"instance-variable": "direction2",
+								"comparison": 0,
+								"value": "\"Left\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "FinalMonster",
+							"sid": 535226710239967,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "left"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "FinalMonster",
+							"sid": 236796837792534,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 155312559770611
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "FinalMonster",
+							"sid": 229607422724637,
+							"parameters": {
+								"object": "BossBarrier"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "FinalMonster",
+							"sid": 328898822754764,
+							"parameters": {
+								"object": "BossAttack",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 267052494039576,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "FinalMonster",
+									"sid": 705154643597453,
+									"parameters": {
+										"instance-variable": "direction2",
+										"comparison": 0,
+										"value": "\"Right\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "FinalMonster",
+									"sid": 715114561253047,
+									"parameters": {
+										"animation": "\"Walk\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "FinalMonster",
+									"sid": 748440685506282,
+									"parameters": {
+										"instance-variable": "direction2",
+										"value": "\"Left\""
+									}
+								}
+							],
+							"sid": 968669604253437
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 370450470434957
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "FinalMonster",
+									"sid": 219109719040242,
+									"parameters": {
+										"animation": "\"Walk\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "FinalMonster",
+									"sid": 723793089926487,
+									"parameters": {
+										"instance-variable": "direction2",
+										"value": "\"Right\""
+									}
+								}
+							],
+							"sid": 264697401008127
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-los-to-object",
+							"objectClass": "FinalMonster",
+							"sid": 498805352271023,
+							"behaviorType": "LineOfSight",
+							"parameters": {
+								"object": "SashaShadow",
+								"image-point": "0"
+							}
+						},
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 421064301305144,
+							"parameters": {
+								"interval-seconds": "1.0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "FinalMonster",
+							"sid": 997495166195815,
+							"parameters": {
+								"object": "BossAttack",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-angle-toward-position",
+							"objectClass": "BossAttack",
+							"sid": 820605752379170,
+							"parameters": {
+								"x": "SashaShadow.X",
+								"y": "SashaShadow.Y"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "BossAttack",
+							"sid": 458526518750613,
+							"parameters": {
+								"angle": "clamp(EnemyWeapon.Angle,90,270)"
+							}
+						}
+					],
+					"sid": 556418231730664,
+					"disabled": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-los-to-object",
+							"objectClass": "FinalMonster",
+							"sid": 856885857349419,
+							"behaviorType": "LineOfSight",
+							"parameters": {
+								"object": "SashaShadow",
+								"image-point": "0"
+							}
+						},
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 634423334653527,
+							"parameters": {
+								"interval-seconds": "1.0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "FinalMonster",
+							"sid": 309879247447392,
+							"parameters": {
+								"animation": "\"Attack1\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 165654489334497
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-los-to-object",
+							"objectClass": "FinalMonster",
+							"sid": 534035934202931,
+							"behaviorType": "LineOfSight",
+							"parameters": {
+								"object": "SashaShadow",
+								"image-point": "0"
+							}
+						},
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 173585648738757,
+							"parameters": {
+								"interval-seconds": "1.0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "FinalMonster",
+							"sid": 347029517122030,
+							"parameters": {
+								"animation": "\"Attack2\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 480537989188157
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-los-to-object",
+							"objectClass": "FinalMonster",
+							"sid": 572411353643689,
+							"behaviorType": "LineOfSight",
+							"parameters": {
+								"object": "SashaShadow",
+								"image-point": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "FinalMonster",
+							"sid": 879116758113047,
+							"parameters": {
+								"object": "BossAttack",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 574111645679434,
+					"disabled": true
+				}
+			],
+			"sid": 791825136452665
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Boss Super Power",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 875463578434823,
+							"parameters": {
+								"interval-seconds": "8"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 195551253678274,
+							"parameters": {
+								"object-to-create": "orbs2",
+								"layer": "0",
+								"x": "6000",
+								"y": "random(770,1455)",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 439571573459171
+				}
+			],
+			"sid": 428265181114634
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Boss Health",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "FinalMonster",
+							"sid": 476937222166453,
+							"parameters": {
+								"instance-variable": "health",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "FinalMonster",
+							"sid": 739145126096836
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "FinalMonster",
+							"sid": 878418558628193,
+							"parameters": {
+								"object": "explosion",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 155976748541680,
+							"parameters": {
+								"seconds": "0.5"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 951332591888613,
+							"parameters": {
+								"group-name": "\"Boss Super Power\"",
+								"state": "deactivated"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "BadBoy",
+							"sid": 508695266539446,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "Castle",
+							"sid": 440308690803423,
+							"parameters": {
+								"animation": "\"BarUp\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 516773395522160,
+							"parameters": {
+								"group-name": "\"BadBoy\"",
+								"state": "activated"
+							}
+						}
+					],
+					"sid": 531767792086513
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "FinalMonster",
+							"sid": 693964915289086,
+							"parameters": {
+								"object": "fireslash"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "flash",
+							"objectClass": "FinalMonster",
+							"sid": 960663934960007,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.05",
+								"off-time": "0.05",
+								"duration": "0.8"
+							}
+						},
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "FinalMonster",
+							"sid": 516078669320647,
+							"parameters": {
+								"instance-variable": "health",
+								"value": "50"
+							}
+						},
+						{
+							"id": "flash",
+							"objectClass": "FinalMonster",
+							"sid": 883123390138890,
+							"behaviorType": "Flash",
+							"parameters": {
+								"on-time": "0.1",
+								"off-time": "0.1",
+								"duration": "3.0"
+							}
+						}
+					],
+					"sid": 142716484250032
+				}
+			],
+			"sid": 113128362531756
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Boss Hurt ",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Add boss hurt sound"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-flashing",
+							"objectClass": "FinalMonster",
+							"sid": 485429844829600,
+							"behaviorType": "Flash"
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "FinalMonster",
+							"sid": 186390292311296,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						}
+					],
+					"sid": 416457201907754
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Sasha",
+							"sid": 553509909116010,
+							"parameters": {
+								"object": "FinalMonster"
+							}
+						},
+						{
+							"id": "is-flashing",
+							"objectClass": "Sasha",
+							"sid": 974804267415790,
+							"behaviorType": "Flash",
+							"isInverted": true
+						}
+					],
+					"actions": [],
+					"sid": 678516077687203,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-y",
+									"objectClass": "Sasha",
+									"sid": 563265617233400,
+									"parameters": {
+										"comparison": 2,
+										"y-co-ordinate": "FinalMonster.Y"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "flash",
+									"objectClass": "FinalMonster",
+									"sid": 574499385463966,
+									"behaviorType": "Flash",
+									"parameters": {
+										"on-time": "0.05",
+										"off-time": "0.05",
+										"duration": "0.8"
+									}
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "FinalMonster",
+									"sid": 833309478314898,
+									"parameters": {
+										"instance-variable": "health",
+										"value": "20"
+									}
+								}
+							],
+							"sid": 407777124054749
+						}
+					]
+				}
+			],
+			"sid": 885688721221103
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Collision and PickUp",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "SashaShadow",
+							"sid": 735003594221086,
+							"parameters": {
+								"object": "SwordpickUp"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "SwordpickUp",
+							"sid": 720661007458089,
+							"parameters": {
+								"object": "EquipmentBox",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "SwordpickUp",
+							"sid": 764630831480870,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "EquipmentBox",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 861048103369651,
+							"parameters": {
+								"group-name": "\"Sword\"",
+								"state": "activated"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "SwordpickUp",
+							"sid": 998686992134092
+						}
+					],
+					"sid": 528257689503327
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "SashaShadow",
+							"sid": 905332115659765,
+							"parameters": {
+								"object": "Gloves"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "Gloves",
+							"sid": 667800891722882,
+							"parameters": {
+								"object": "EquipmentBox",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "Gloves",
+							"sid": 693796295563868,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "EquipmentBox",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 423525087507320,
+							"parameters": {
+								"group-name": "\"Sasha Powers\"",
+								"state": "activated"
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "Gloves",
+							"sid": 280457551749085
+						}
+					],
+					"sid": 635832022333384
+				}
+			],
+			"sid": 256445529112106
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Sword",
+			"description": "",
+			"isActiveOnStart": false,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 628559408140824,
+							"parameters": {
+								"key": 83
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Sasha",
+							"sid": 494307380370443,
+							"parameters": {
+								"animation": "\"Sword\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 637482995121818,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Sasha",
+									"sid": 724281456006294,
+									"parameters": {
+										"object": "FinalMonster"
+									}
+								},
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Sasha",
+									"sid": 170725888704611,
+									"parameters": {
+										"animation": "\"Sword\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "flash",
+									"objectClass": "FinalMonster",
+									"sid": 666406435384770,
+									"behaviorType": "Flash",
+									"parameters": {
+										"on-time": "0.05",
+										"off-time": "0.05",
+										"duration": "0.8"
+									}
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "FinalMonster",
+									"sid": 595348488209562,
+									"parameters": {
+										"instance-variable": "health",
+										"value": "10"
+									}
+								},
+								{
+									"id": "flash",
+									"objectClass": "FinalMonster",
+									"sid": 787277855912479,
+									"behaviorType": "Flash",
+									"parameters": {
+										"on-time": "0.1",
+										"off-time": "0.1",
+										"duration": "3.0"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "FinalMonster",
+									"sid": 263215464156707,
+									"parameters": {
+										"animation": "\"Hurt\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 876677192993106
+						}
+					]
+				}
+			],
+			"sid": 655927934383177
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "BossHUDInvisible",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 367647885252663
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 452043321024958,
+							"parameters": {
+								"layer": "\"BossHUD\"",
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 802751723944749
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "SashaShadow",
+							"sid": 384311613772525,
+							"parameters": {
+								"object": "detection"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 753082359634559,
+							"parameters": {
+								"layer": "\"BossHUD\"",
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 284025353988024
+				}
+			],
+			"sid": 456195865924159
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "BadBoy",
+			"description": "",
+			"isActiveOnStart": false,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "FinalMonster",
+							"sid": 700549728241078,
+							"parameters": {
+								"instance-variable": "health",
+								"comparison": 3,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "BadBoy2",
+							"sid": 509794715985224,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 457439755087045
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "SashaShadow",
+							"sid": 245024716562874,
+							"parameters": {
+								"object": "BadBoy2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 832679613664387,
+							"parameters": {
+								"layout": "LevelComplete6"
+							}
+						}
+					],
+					"sid": 651627970705157
+				}
+			],
+			"sid": 986616983482042
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-android",
+					"objectClass": "PlatformInfo",
+					"sid": 281831502444886
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "tleft",
+					"sid": 901912259092081,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "tright",
+					"sid": 371407726483672,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Jump",
+					"sid": 931973512552097,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "down",
+					"sid": 818346081071574,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "pickUp2",
+					"sid": 217016435959339,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "sword",
+					"sid": 541064548819526,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "speed",
+					"sid": 782209705539831,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 704876304109495,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "MobileControls6",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 526304506102629,
+									"parameters": {
+										"object": "rightshadow"
+									}
+								},
+								{
+									"id": "is-on-floor",
+									"objectClass": "SashaShadow",
+									"sid": 427375953337283,
+									"disabled": true,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Sasha",
+									"sid": 169698722164247,
+									"parameters": {
+										"animation": "\"Run\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Sasha",
+									"sid": 460669323340691,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "SashaShadow",
+									"sid": 989435212618559,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "right"
+									}
+								}
+							],
+							"sid": 574293445881718,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-touching-object",
+											"objectClass": "Touch",
+											"sid": 447834636848431,
+											"parameters": {
+												"object": "jumpshadow"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Sasha",
+											"sid": 482838101157098,
+											"parameters": {
+												"animation": "\"Jump\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "simulate-control",
+											"objectClass": "SashaShadow",
+											"sid": 557375610489265,
+											"behaviorType": "Platform",
+											"parameters": {
+												"control": "jump"
+											}
+										}
+									],
+									"sid": 576993485160638,
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-touching-object",
+											"objectClass": "Touch",
+											"sid": 278520819276665,
+											"parameters": {
+												"object": "downshadow"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Sasha",
+											"sid": 789021082679051,
+											"parameters": {
+												"animation": "\"Slide\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 681079783874086
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 703304020958801,
+									"parameters": {
+										"object": "leftshadow"
+									}
+								},
+								{
+									"id": "is-on-floor",
+									"objectClass": "SashaShadow",
+									"sid": 757755459551422,
+									"disabled": true,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Sasha",
+									"sid": 982536784200624,
+									"parameters": {
+										"animation": "\"Run\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Sasha",
+									"sid": 697930791262973,
+									"parameters": {
+										"state": "mirrored"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "SashaShadow",
+									"sid": 768255961798282,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "left"
+									}
+								}
+							],
+							"sid": 590738549411677,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-touching-object",
+											"objectClass": "Touch",
+											"sid": 262902435077825,
+											"parameters": {
+												"object": "jumpshadow"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Sasha",
+											"sid": 758057485124974,
+											"parameters": {
+												"animation": "\"Jump\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "simulate-control",
+											"objectClass": "SashaShadow",
+											"sid": 721903951278389,
+											"behaviorType": "Platform",
+											"parameters": {
+												"control": "jump"
+											}
+										}
+									],
+									"sid": 608155541722840
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-touching-object",
+											"objectClass": "Touch",
+											"sid": 250268468429428,
+											"parameters": {
+												"object": "downshadow"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Sasha",
+											"sid": 946816312710015,
+											"parameters": {
+												"animation": "\"Slide\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 219861822308134
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 134043055875908,
+									"parameters": {
+										"object": "jumpshadow"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Sasha",
+									"sid": 290489023127591,
+									"parameters": {
+										"animation": "\"Jump\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "SashaShadow",
+									"sid": 524570974505453,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "jump"
+									}
+								}
+							],
+							"sid": 630567936232723
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 464653131077561,
+									"parameters": {
+										"object": "speedshadow"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-max-speed",
+									"objectClass": "SashaShadow",
+									"sid": 421071506833947,
+									"behaviorType": "Platform",
+									"parameters": {
+										"max-speed": "750"
+									}
+								},
+								{
+									"id": "set-jump-strength",
+									"objectClass": "SashaShadow",
+									"sid": 809233471888584,
+									"behaviorType": "Platform",
+									"parameters": {
+										"jump-strength": "1200"
+									}
+								}
+							],
+							"sid": 605188886495986
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "SashaShadow",
+									"sid": 486984704660483,
+									"parameters": {
+										"object": "Trashes"
+									}
+								},
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 817964519449890,
+									"parameters": {
+										"object": "pickupshadow"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 318008413248795,
+									"parameters": {
+										"variable": "Trashes",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "TrashCollected",
+									"sid": 874566920901957,
+									"parameters": {
+										"text": "\"x \" & Trashes"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Trashes",
+									"sid": 574143880694396
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 502252657992771,
+									"parameters": {
+										"audio-file": "Retro Game Coin Sound Effect",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 833488778978658
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 740255040180680,
+									"parameters": {
+										"object": "swordshadow"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Sasha",
+									"sid": 896950483481200,
+									"parameters": {
+										"animation": "\"Sword\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 568947064280020,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "Sasha",
+											"sid": 594844189288285,
+											"parameters": {
+												"object": "FinalMonster"
+											}
+										},
+										{
+											"id": "is-animation-playing",
+											"objectClass": "Sasha",
+											"sid": 208182160223052,
+											"parameters": {
+												"animation": "\"Sword\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "flash",
+											"objectClass": "FinalMonster",
+											"sid": 784514784474354,
+											"behaviorType": "Flash",
+											"parameters": {
+												"on-time": "0.05",
+												"off-time": "0.05",
+												"duration": "0.8"
+											}
+										},
+										{
+											"id": "subtract-from-instvar",
+											"objectClass": "FinalMonster",
+											"sid": 302336376993170,
+											"parameters": {
+												"instance-variable": "health",
+												"value": "10"
+											}
+										},
+										{
+											"id": "flash",
+											"objectClass": "FinalMonster",
+											"sid": 716182293888713,
+											"behaviorType": "Flash",
+											"parameters": {
+												"on-time": "0.1",
+												"off-time": "0.1",
+												"duration": "3.0"
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "FinalMonster",
+											"sid": 418087320913981,
+											"parameters": {
+												"animation": "\"Hurt\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 276360115047905
+								}
+							]
+						}
+					],
+					"sid": 803090931751254
+				}
+			],
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-ios",
+					"objectClass": "PlatformInfo",
+					"sid": 696091498880961
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "sword",
+					"sid": 111400421716495,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "pickUp2",
+					"sid": 673411537149971,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "down",
+					"sid": 640570354645533,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Jump",
+					"sid": 888459379648066,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "tright",
+					"sid": 201141496940786,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "tleft",
+					"sid": 360789801551348,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "speed",
+					"sid": 518479750408460,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 177968479695495,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "MobileControls7",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 682293305961309,
+									"parameters": {
+										"object": "rightshadow"
+									}
+								},
+								{
+									"id": "is-on-floor",
+									"objectClass": "SashaShadow",
+									"sid": 335177338704533,
+									"disabled": true,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Sasha",
+									"sid": 132933437171583,
+									"parameters": {
+										"animation": "\"Run\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Sasha",
+									"sid": 301070473838040,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "SashaShadow",
+									"sid": 200824609004059,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "right"
+									}
+								}
+							],
+							"sid": 619249425712389,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-touching-object",
+											"objectClass": "Touch",
+											"sid": 337324526307980,
+											"parameters": {
+												"object": "jumpshadow"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Sasha",
+											"sid": 403212271968607,
+											"parameters": {
+												"animation": "\"Jump\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "simulate-control",
+											"objectClass": "SashaShadow",
+											"sid": 190574895485417,
+											"behaviorType": "Platform",
+											"parameters": {
+												"control": "jump"
+											}
+										}
+									],
+									"sid": 228456183849853,
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-touching-object",
+											"objectClass": "Touch",
+											"sid": 577929343875646,
+											"parameters": {
+												"object": "downshadow"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Sasha",
+											"sid": 447203678880792,
+											"parameters": {
+												"animation": "\"Slide\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 728624176240950
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 843719187834260,
+									"parameters": {
+										"object": "leftshadow"
+									}
+								},
+								{
+									"id": "is-on-floor",
+									"objectClass": "SashaShadow",
+									"sid": 521561378800053,
+									"disabled": true,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Sasha",
+									"sid": 668006238188161,
+									"parameters": {
+										"animation": "\"Run\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "Sasha",
+									"sid": 621792266935420,
+									"parameters": {
+										"state": "mirrored"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "SashaShadow",
+									"sid": 564036412621637,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "left"
+									}
+								}
+							],
+							"sid": 367437819313937,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-touching-object",
+											"objectClass": "Touch",
+											"sid": 731150000570934,
+											"parameters": {
+												"object": "jumpshadow"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Sasha",
+											"sid": 589169790094548,
+											"parameters": {
+												"animation": "\"Jump\"",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "simulate-control",
+											"objectClass": "SashaShadow",
+											"sid": 168617702266013,
+											"behaviorType": "Platform",
+											"parameters": {
+												"control": "jump"
+											}
+										}
+									],
+									"sid": 380309555222393
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-touching-object",
+											"objectClass": "Touch",
+											"sid": 517786396850620,
+											"parameters": {
+												"object": "downshadow"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "Sasha",
+											"sid": 888443372064987,
+											"parameters": {
+												"animation": "\"Slide\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 496093334017636
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 602605118982150,
+									"parameters": {
+										"object": "jumpshadow"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Sasha",
+									"sid": 746246770467061,
+									"parameters": {
+										"animation": "\"Jump\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "simulate-control",
+									"objectClass": "SashaShadow",
+									"sid": 170899830322471,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "jump"
+									}
+								}
+							],
+							"sid": 564883119306020
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 460978024117385,
+									"parameters": {
+										"object": "speedshadow"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-max-speed",
+									"objectClass": "SashaShadow",
+									"sid": 687815799614414,
+									"behaviorType": "Platform",
+									"parameters": {
+										"max-speed": "750"
+									}
+								},
+								{
+									"id": "set-jump-strength",
+									"objectClass": "SashaShadow",
+									"sid": 373970324687996,
+									"behaviorType": "Platform",
+									"parameters": {
+										"jump-strength": "1200"
+									}
+								}
+							],
+							"sid": 592545232299985
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "SashaShadow",
+									"sid": 568867488725252,
+									"parameters": {
+										"object": "Trashes"
+									}
+								},
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 166230446608418,
+									"parameters": {
+										"object": "pickupshadow"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 710305976148139,
+									"parameters": {
+										"variable": "Trashes",
+										"value": "1"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "TrashCollected",
+									"sid": 697335726880265,
+									"parameters": {
+										"text": "\"x \" & Trashes"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Trashes",
+									"sid": 547867362595480
+								},
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 776662270575753,
+									"parameters": {
+										"audio-file": "Retro Game Coin Sound Effect",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								}
+							],
+							"sid": 678398623489297
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-touching-object",
+									"objectClass": "Touch",
+									"sid": 999030054425785,
+									"parameters": {
+										"object": "swordshadow"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "Sasha",
+									"sid": 984084579097078,
+									"parameters": {
+										"animation": "\"Sword\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 871443143011168,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "on-collision-with-another-object",
+											"objectClass": "Sasha",
+											"sid": 682719693041585,
+											"parameters": {
+												"object": "FinalMonster"
+											}
+										},
+										{
+											"id": "is-animation-playing",
+											"objectClass": "Sasha",
+											"sid": 105087956035681,
+											"parameters": {
+												"animation": "\"Sword\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "flash",
+											"objectClass": "FinalMonster",
+											"sid": 462534898265763,
+											"behaviorType": "Flash",
+											"parameters": {
+												"on-time": "0.05",
+												"off-time": "0.05",
+												"duration": "0.8"
+											}
+										},
+										{
+											"id": "subtract-from-instvar",
+											"objectClass": "FinalMonster",
+											"sid": 802019834607524,
+											"parameters": {
+												"instance-variable": "health",
+												"value": "10"
+											}
+										},
+										{
+											"id": "flash",
+											"objectClass": "FinalMonster",
+											"sid": 254563943145895,
+											"behaviorType": "Flash",
+											"parameters": {
+												"on-time": "0.1",
+												"off-time": "0.1",
+												"duration": "3.0"
+											}
+										},
+										{
+											"id": "set-animation",
+											"objectClass": "FinalMonster",
+											"sid": 773685166853393,
+											"parameters": {
+												"animation": "\"Hurt\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 188199991190899
+								}
+							]
+						}
+					],
+					"sid": 978610841052980
+				}
+			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Pause3",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-tap-object",
+							"objectClass": "Touch",
+							"sid": 493053032194461,
+							"parameters": {
+								"object": "Pausebtn2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 572633153682245,
+							"parameters": {
+								"time-scale": "0"
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 409747503353177,
+							"parameters": {
+								"layer": "\"Pause2\"",
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 920988732187415
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 478234999706258,
+							"parameters": {
+								"layer": "\"Pause2\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-opacity",
+							"objectClass": "System",
+							"sid": 255258028331210,
+							"parameters": {
+								"layer": "0",
+								"opacity": "50"
+							}
+						}
+					],
+					"sid": 803387043722240,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 971496770942773,
+									"parameters": {
+										"object": "PlayButton2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 111422960505802,
+									"parameters": {
+										"audio-file": "click4",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 746443352611278,
+									"parameters": {
+										"layer": "\"Pause2\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-time-scale",
+									"objectClass": "System",
+									"sid": 355709117347908,
+									"parameters": {
+										"time-scale": "1.0"
+									}
+								}
+							],
+							"sid": 820640911086415
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 977703117099789,
+									"parameters": {
+										"object": "RetryButton2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 646873544740449,
+									"parameters": {
+										"audio-file": "click4",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 672570673900810,
+									"parameters": {
+										"layer": "\"Pause2\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-time-scale",
+									"objectClass": "System",
+									"sid": 789895385578669,
+									"parameters": {
+										"time-scale": "1.0"
+									}
+								},
+								{
+									"id": "restart-layout",
+									"objectClass": "System",
+									"sid": 756325176907278
+								}
+							],
+							"sid": 790338617802073
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-tap-object",
+									"objectClass": "Touch",
+									"sid": 963827566831271,
+									"parameters": {
+										"object": "MenuButton2"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 947120305479395,
+									"parameters": {
+										"audio-file": "click4",
+										"loop": "not-looping",
+										"volume": "0",
+										"stereo-pan": "0",
+										"tag-optional": "\"\""
+									}
+								},
+								{
+									"id": "set-layer-visible",
+									"objectClass": "System",
+									"sid": 908815151502447,
+									"parameters": {
+										"layer": "\"Pause2\"",
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-time-scale",
+									"objectClass": "System",
+									"sid": 123349690787945,
+									"parameters": {
+										"time-scale": "1.0"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 231351569094415,
+									"parameters": {
+										"layout": "Menu"
+									}
+								}
+							],
+							"sid": 932082874001401
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 254550025421294
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-opacity",
+							"objectClass": "System",
+							"sid": 711878307526436,
+							"parameters": {
+								"layer": "0",
+								"opacity": "100"
+							}
+						}
+					],
+					"sid": 305292766382988
+				}
+			],
+			"sid": 970362476210425
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 735888107741909,
+					"parameters": {
+						"object": "MuteIcon3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 916726136879050,
+					"parameters": {
+						"audio-file": "click4",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 730838383041015,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 641934542916700,
+							"parameters": {
+								"variable": "IsMuted2",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "MuteIcon3",
+							"sid": 415930605230687,
+							"parameters": {
+								"animation": "\"Mute\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 685515138894616,
+							"disabled": true,
+							"parameters": {
+								"tag": "\"Music\"",
+								"db": "-100"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 146239536561462,
+							"parameters": {
+								"variable": "IsMuted2",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-muted",
+							"objectClass": "Audio",
+							"sid": 792312782718983,
+							"parameters": {
+								"tag": "\"Music\"",
+								"state": "muted"
+							}
+						}
+					],
+					"sid": 528774911694341
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 914866267555695
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 658505871218341,
+							"parameters": {
+								"variable": "IsMuted2",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-volume",
+							"objectClass": "Audio",
+							"sid": 568045509701681,
+							"disabled": true,
+							"parameters": {
+								"tag": "\"Music\"",
+								"db": "0"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "MuteIcon3",
+							"sid": 781632223838507,
+							"parameters": {
+								"animation": "\"UnMute\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-muted",
+							"objectClass": "Audio",
+							"sid": 609545647092381,
+							"parameters": {
+								"tag": "\"Music\"",
+								"state": "unmuted"
+							}
+						}
+					],
+					"sid": 528347246168721
+				}
+			]
+		}
+	],
+	"sid": 663449251147403
+}

@@ -1,0 +1,237 @@
+{
+	"name": "LevelSelect",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "Level",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 838648756872975
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 966662215088594
+				}
+			],
+			"actions": [],
+			"sid": 593699156299930,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "levelselectbtn",
+							"sid": 882699692168360,
+							"parameters": {
+								"instance-variable": "level",
+								"comparison": 3,
+								"value": "Level"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "levelselectbtn",
+							"sid": 994402687546466,
+							"parameters": {
+								"frame-number": "0"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "levelselectbtn",
+							"sid": 403239562703235,
+							"parameters": {
+								"object": "one",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "one",
+							"sid": 586457188915991,
+							"parameters": {
+								"text": "levelselectbtn.level"
+							}
+						}
+					],
+					"sid": 343097913439769
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "levelselectbtn",
+							"sid": 779727284254815,
+							"parameters": {
+								"instance-variable": "level",
+								"comparison": 4,
+								"value": "Level"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "levelselectbtn",
+							"sid": 154221731161367,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 320017901943996
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 971581867974550,
+					"parameters": {
+						"object": "levelselectbtn"
+					}
+				},
+				{
+					"id": "compare-animation-frame",
+					"objectClass": "levelselectbtn",
+					"sid": 133372632704352,
+					"parameters": {
+						"comparison": 0,
+						"number": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout-by-name",
+					"objectClass": "System",
+					"sid": 518642185856663,
+					"parameters": {
+						"layout": "str(levelselectbtn.level)"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 785609631320047,
+					"parameters": {
+						"audio-file": "click4",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 504526073703842
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 502850271528412,
+					"parameters": {
+						"object": "Buttons"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 353134692071130
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-end-of-layout",
+					"objectClass": "System",
+					"sid": 791970262880281
+				}
+			],
+			"actions": [],
+			"sid": 805379196550256,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 611476141059155,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 4,
+								"second-value": "Level"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 374520723453043
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-tap-object",
+					"objectClass": "Touch",
+					"sid": 109290074542716,
+					"parameters": {
+						"object": "BtnExitShadow"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 968465034754506,
+					"parameters": {
+						"seconds": "0.2"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 235985025927686,
+					"parameters": {
+						"layout": "Menu"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 107278967617284,
+					"parameters": {
+						"audio-file": "click4",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 738325362533618
+		}
+	],
+	"sid": 634396662486576
+}

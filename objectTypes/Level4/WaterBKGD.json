@@ -1,0 +1,59 @@
+{
+	"name": "WaterBKGD",
+	"plugin-id": "Sprite",
+	"sid": 476117657214330,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "WaveHeight",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 795862345319272
+		},
+		{
+			"name": "waves",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 303733698351416
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "water",
+			"name": "Water"
+		}
+	],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 3125,
+						"height": 1574,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8613430,
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 471446785366860,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

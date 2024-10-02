@@ -1,0 +1,61 @@
+{
+	"name": "Coin1",
+	"plugin-id": "Sprite",
+	"sid": 235585324750572,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 484,
+						"height": 515,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 8022884,
+						"collisionPoly": {
+							"points": [
+								0.2995867768595042,
+								0.07766990291262135,
+								0.6053719008264463,
+								0.027184466019417475,
+								0.9152892561983472,
+								0.1844660194174757,
+								0.9731404958677686,
+								0.4640776699029126,
+								0.7913223140495862,
+								0.8174757281553395,
+								0.4731404958677685,
+								0.9592233009708739,
+								0.14049586776859505,
+								0.8291262135922333,
+								0.004132231404958678,
+								0.4621359223300968,
+								0.09504132231404958,
+								0.2485436893203883
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 248949702114038,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -1,0 +1,15 @@
+{
+	"name": "PlayFabAPI",
+	"plugin-id": "PlayFabAPI",
+	"sid": 218197465943546,
+	"singleglobal-inst": {
+		"type": "PlayFabAPI",
+		"properties": {
+			"test-property": 0,
+			"project-id": "21540"
+		},
+		"uid": 2391,
+		"sid": 297479743604431,
+		"tags": ""
+	}
+}

@@ -1,0 +1,104 @@
+{
+	"name": "PowerUpBox",
+	"plugin-id": "Sprite",
+	"sid": 876160439103562,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 849520132369034
+		},
+		{
+			"behaviorId": "lunarray_LiteTween",
+			"name": "LiteTween",
+			"sid": 629207258914747
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 4596883,
+						"collisionPoly": {
+							"points": [
+								0.0625,
+								0,
+								0.9375,
+								0,
+								1,
+								0.0625,
+								1,
+								0.9375,
+								0.9375,
+								1,
+								0.0625,
+								1,
+								0,
+								0.9375,
+								0,
+								0.0625
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					},
+					{
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 5016998,
+						"collisionPoly": {
+							"points": [
+								0.0625,
+								0,
+								0.9375,
+								0,
+								1,
+								0.0625,
+								1,
+								0.9375,
+								0.9375,
+								1,
+								0.0625,
+								1,
+								0,
+								0.9375,
+								0,
+								0.0625
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 102625108139751,
+				"name": "Animation 1",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 0
+			}
+		],
+		"subfolders": []
+	}
+}

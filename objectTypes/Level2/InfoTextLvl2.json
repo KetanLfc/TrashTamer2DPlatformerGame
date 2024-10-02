@@ -1,0 +1,20 @@
+{
+	"name": "InfoTextLvl2",
+	"plugin-id": "Text",
+	"sid": 604783486177167,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 720137255955847
+		},
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 793317651757694
+		}
+	],
+	"effectTypes": []
+}

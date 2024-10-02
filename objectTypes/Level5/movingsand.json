@@ -1,0 +1,70 @@
+{
+	"name": "movingsand",
+	"plugin-id": "Sprite",
+	"sid": 699148703531028,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 330673566654667
+		},
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 119853632038655
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 48,
+						"height": 48,
+						"originX": 0,
+						"originY": 0,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 568152,
+						"collisionPoly": {
+							"points": [
+								0.07142857142857142,
+								0,
+								0.9571428571428572,
+								0.014285714285714285,
+								1,
+								0.07142857142857142,
+								0.9857142857142858,
+								0.5285714285714286,
+								0.9428571428571428,
+								0.5714285714285714,
+								0.05714285714285714,
+								0.5714285714285714,
+								0,
+								0.5,
+								0.014285714285714285,
+								0.04285714285714286
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1,
+						"tag": ""
+					}
+				],
+				"sid": 849976640844972,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

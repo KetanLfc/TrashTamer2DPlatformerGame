@@ -1,0 +1,257 @@
+{
+	"name": "Level5",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Level2"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "SashaShadow",
+					"sid": 759429849788266,
+					"parameters": {
+						"object": "fire"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 702243782602286,
+					"parameters": {
+						"audio-file": "game over - sound effect",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"callFunction": "Hero_Health_Func",
+					"sid": 650362662522777
+				},
+				{
+					"id": "flash",
+					"objectClass": "Sasha",
+					"sid": 445094856644549,
+					"behaviorType": "Flash",
+					"parameters": {
+						"on-time": "0.1",
+						"off-time": "0.1",
+						"duration": "3.0"
+					}
+				},
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 148820778812141
+				}
+			],
+			"sid": 982977988219964
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "movingsand",
+					"sid": 218065056987866,
+					"parameters": {
+						"object": "Obj_platformcollision"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "bounce-off-object",
+					"objectClass": "movingsand",
+					"sid": 739863740786901,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"object": "Obj_platformcollision"
+					}
+				}
+			],
+			"sid": 380732852905573
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "SashaShadow",
+					"sid": 553217622510304,
+					"parameters": {
+						"object": "Trigger_break"
+					}
+				},
+				{
+					"id": "pick-nearestfurthest",
+					"objectClass": "particleblock",
+					"sid": 546806468787182,
+					"parameters": {
+						"which": "nearest",
+						"x": "SashaShadow.X",
+						"y": "SashaShadow.Y"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "Sasha",
+					"sid": 607347124214353,
+					"parameters": {
+						"animation": "\"Collision\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "particleblock",
+					"sid": 690090403645922,
+					"parameters": {
+						"object": "Particles",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "Particles",
+					"sid": 929650415563809,
+					"parameters": {
+						"angle": "270"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Trigger_break",
+					"sid": 211904427738244
+				},
+				{
+					"id": "destroy",
+					"objectClass": "particleblock",
+					"sid": 218522358642426
+				}
+			],
+			"sid": 629008347877101
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "SashaShadow",
+					"sid": 383386447244844,
+					"parameters": {
+						"object": "fire"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 241716238762501,
+					"parameters": {
+						"audio-file": "game over - sound effect",
+						"loop": "not-looping",
+						"volume": "0",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 715727888039093,
+					"parameters": {
+						"seconds": "0.2"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Sasha",
+					"sid": 150322197405806,
+					"parameters": {
+						"instance-variable": "Health",
+						"value": "5"
+					}
+				}
+			],
+			"sid": 963567171243656
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "SashaShadow",
+					"sid": 267753871780679,
+					"parameters": {
+						"object": "Flag5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 961956794558667,
+					"parameters": {
+						"layout": "LevelComplete5"
+					}
+				}
+			],
+			"sid": 160739589309807
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 660157904620898
+				}
+			],
+			"actions": [
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "Lvl5Txt",
+					"sid": 251212419844589,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "TextWindow",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "Lvl5Txt",
+					"sid": 980634964580702,
+					"behaviorType": "Fade"
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "TextWindow",
+					"sid": 748749622273634,
+					"behaviorType": "Fade"
+				}
+			],
+			"sid": 581477827979852
+		}
+	],
+	"sid": 809269989106858
+}

@@ -1,0 +1,15 @@
+{
+	"name": "MenuTxt2",
+	"plugin-id": "Text",
+	"sid": 146846539610654,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pin",
+			"name": "Pin",
+			"sid": 900911634306122
+		}
+	],
+	"effectTypes": []
+}
